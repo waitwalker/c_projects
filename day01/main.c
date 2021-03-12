@@ -8,8 +8,13 @@
 #include <stdio.h>
 #include "person.h"
 
+//宏变量定义
+#define PI 3.14
+
+/// 求圆的面积
+/// @param a 半径
 double getCircle(double a) {
-    return a * a * 3.14;
+    return a * a * PI;
 }
 
 int main(int argc, const char * argv[]) {
