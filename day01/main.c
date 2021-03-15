@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "person.h"
 
-//宏变量定义
+//宏变量定义 一般建议大写,和普通变量区分开
 #define PI 3.14
 
 /// 求圆的面积
