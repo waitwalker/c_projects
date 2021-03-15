@@ -18,14 +18,23 @@ int main(int argc, const char * argv[]) {
     //char 字符类型,占1字节空间(8位空间)
     //short 短整型,占2个字节空间(8*2=16位空间)
     //int 整型,占4字节空间(8*4=32位),即当定义int类型变量的时候,会开辟4字节空间来存储变量
-    //long 长整型,占4字节空间(8*4=32位);long long, 长长整型看计算机系统,一般占8字节
+    //long 长整型,占8字节空间(8*8=64位);long long, 长长整型看计算机系统,一般占16字节
     //float 单精度浮点型,占4字节空间(8*4=32位)
     //double 双精度浮点型,占8字节空间(8*8=64位)
     //sizeof 测定类型的长度,而不是变量的长度
-    
+    //signed有符号,最高位为符号位,其他位为数据位;最高位为1表示负数,最高位为0表示为正数
+    //unsigned无符号,自身的二进制位都是数据位,没有符号位
+    // singed char 表示的范围 11111111~10000000 ~~ 00000000~01111111
+    //signed有符号数默认是省略的
+    unsigned int m = -12;
     int a, b;
-    printf("输入数字a和b");
+    char c[1] = "1";
+    printf("c:%s\n",c);
+    printf("char 类型占用长度:%lu\n",sizeof(c));
+    printf("输入数字a和b\n");
     scanf("%d %d", &a, &b);
-    printf("a:%d\n b:%d",a, b);
+    printf("a:%d\nb:%d\n",a, b);
+    printf("int类型长度:%lu\n",sizeof(a));
+    printf("long类型长度:%lu\n",sizeof(long));
     return 0;
 }
