@@ -26,7 +26,20 @@ int main(int argc, const char * argv[]) {
     //unsigned无符号,自身的二进制位都是数据位,没有符号位
     // singed char 表示的范围 11111111~10000000 ~~ 00000000~01111111
     //signed有符号数默认是省略的
+    //struct结构体中的成员拥有独立的空间
+    struct data {
+        char a;
+        int bl;
+        long ca;
+    };
+    //union共用体,成员共享同一份空间
+    union data2 {
+        char a;
+        int ba;
+        long d;
+    };
     unsigned int m = -12;
+    printf("%u\n",m);
     int a, b;
     char c[1] = "1";
     printf("c:%s\n",c);
