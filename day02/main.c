@@ -6,6 +6,7 @@
 //
 
 #include <stdio.h>
+typedef int myInt;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -36,8 +37,11 @@ int main(int argc, const char * argv[]) {
     //typedef 为已有的类型取个别名
     //volatile 防止编译器优化
     //register 寄存器变量
+    //register 寄存器变量不能取地址
     
     register int num = 30;
+    myInt ae = 123;
+    printf("ae:%d\n", ae);
     
     struct data {
         char a;
