@@ -52,9 +52,10 @@ int main(int argc, const char * argv[]) {
     myInt ae = 123;
     
     //不同进制仅仅是数据的表现形式,不会修改数据本身
-    printf("八进制ae:%o\n", ae);
+    //可以在输出前面添加一个#,用于区分不同的进制
+    printf("八进制ae:%#o\n", ae);
     printf("十进制ae:%d\n", ae);
-    printf("十六进制ae:%x\n", ae);
+    printf("十六进制ae:%#x\n", ae);
     
     struct data {
         char a;
