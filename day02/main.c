@@ -40,8 +40,15 @@ int main(int argc, const char * argv[]) {
     //register 寄存器变量不能取地址
     //volatile防止编译器优化,强制访问内存操作
     //高频繁使用某个变量的时候,系统会把这个变量从内存中优化到寄存器中,通过volatile可以防止编译器优化,强制进行内存操作
+    //数据类型包括
+    //基本类型
+    //构造类型
+    //指针类型
+    //常量:值是不能修改的
+    //变量名代表的就是空间的内容
+    //操作变量就是对内容空间的操作
     
-    register int num = 30;
+    register  int num = 30;
     myInt ae = 123;
     printf("ae:%d\n", ae);
     
