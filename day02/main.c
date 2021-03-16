@@ -30,6 +30,15 @@ int main(int argc, const char * argv[]) {
     volatile int cdd = 20;
     
     //volatile 防止编译器优化
+    //auto 自动类型
+    //register寄存器变量
+    //sizeof 计算类型的大小
+    //typedef 为已有的类型取个别名
+    //volatile 防止编译器优化
+    //register 寄存器变量
+    
+    register int num = 30;
+    
     struct data {
         char a;
         int bl;
