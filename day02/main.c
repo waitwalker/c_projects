@@ -51,6 +51,7 @@ int main(int argc, const char * argv[]) {
     register  int num = 30;
     myInt ae = 123;
     
+    //不同进制仅仅是数据的表现形式,不会修改数据本身
     printf("八进制ae:%o\n", ae);
     printf("十进制ae:%d\n", ae);
     printf("十六进制ae:%x\n", ae);
