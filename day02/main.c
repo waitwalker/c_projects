@@ -27,6 +27,9 @@ int main(int argc, const char * argv[]) {
     // singed char 表示的范围 11111111~10000000 ~~ 00000000~01111111
     //signed有符号数默认是省略的
     //struct结构体中的成员拥有独立的空间
+    volatile int cdd = 20;
+    
+    //volatile 防止编译器优化
     struct data {
         char a;
         int bl;
