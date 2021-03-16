@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
     //变量名代表的就是空间的内容
     //操作变量就是对内容空间的操作
     
-    register  int num = 30;
+    register int num = 30;
     myInt ae = 123;
     
     //不同进制仅仅是数据的表现形式,不会修改数据本身
@@ -57,6 +57,12 @@ int main(int argc, const char * argv[]) {
     printf("十进制ae:%d\n", ae);
     printf("十六进制ae:%#x\n", ae);
     
+    printf("ae存储地址:%#x\n", &ae);
+    //&ae 代表ae对应空间的起始地址
+    //有符号的用%d,无符号输出用%u
+    //short 输出可以用%hd或者%d
+    short l = 3;
+    printf("%d",l);
     struct data {
         char a;
         int bl;
