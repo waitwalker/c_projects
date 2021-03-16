@@ -50,7 +50,10 @@ int main(int argc, const char * argv[]) {
     
     register  int num = 30;
     myInt ae = 123;
-    printf("ae:%d\n", ae);
+    
+    printf("八进制ae:%o\n", ae);
+    printf("十进制ae:%d\n", ae);
+    printf("十六进制ae:%x\n", ae);
     
     struct data {
         char a;
