@@ -63,6 +63,8 @@ int main(int argc, const char * argv[]) {
     //short 输出可以用%hd或者%d
     short l = 3;
     printf("%d",l);
+    
+    scanf("%d",&l);
     struct data {
         char a;
         int bl;
@@ -85,5 +87,10 @@ int main(int argc, const char * argv[]) {
     printf("a:%d\nb:%d\n",a, b);
     printf("int类型长度:%lu\n",sizeof(a));
     printf("long类型长度:%lu\n",sizeof(long));
+    
+    /// 字符常量&变量 一般是单引号的
+    // 字符常量还包括一些转义字符
+    // 输出字符常量用%c
+    char q = '24';
     return 0;
 }
