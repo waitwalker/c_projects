@@ -18,7 +18,6 @@ int main(int argc, const char * argv[]) {
     printf("%c\n",ch + 1);
     printf("%d\n",ch + 1);
     char ch1, ch2;
-    scanf("%c, %c", &ch1, &ch2);
     ch1 = getchar();
     getchar();
     ch2 = getchar();
