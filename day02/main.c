@@ -9,6 +9,11 @@
 typedef int myInt;
 
 int main(int argc, const char * argv[]) {
+    
+    char ch = 'a';
+    printf("%c\n",ch);
+    printf("%d\n",ch);
+    
     // insert code here...
     printf("Hello, World!\n");
     //一位二进制只能,存放0或者1,或者计算机只能存高电频或低电频 一位用b表示(小写)
@@ -91,6 +96,7 @@ int main(int argc, const char * argv[]) {
     /// 字符常量&变量 一般是单引号的
     // 字符常量还包括一些转义字符
     // 输出字符常量用%c
+    //字符变量本地存储的是 'a'的ASCII值
     char q = '24';
     return 0;
 }
