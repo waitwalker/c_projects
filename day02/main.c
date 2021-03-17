@@ -17,6 +17,12 @@ int main(int argc, const char * argv[]) {
     
     printf("%c\n",ch + 1);
     printf("%d\n",ch + 1);
+    char ch1, ch2;
+    scanf("%c, %c", &ch1, &ch2);
+    ch1 = getchar();
+    getchar();
+    ch2 = getchar();
+    printf("%c, %c", ch1, ch2);
     // insert code here...
     printf("Hello, World!\n");
     //一位二进制只能,存放0或者1,或者计算机只能存高电频或低电频 一位用b表示(小写)
