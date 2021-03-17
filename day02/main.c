@@ -9,11 +9,14 @@
 typedef int myInt;
 
 int main(int argc, const char * argv[]) {
-    
+    //字符是构成字符串的基本 'a'单引号表示取a的ASCII值
+    //字符在计算机中存储的是ASCII值
     char ch = 'a';
     printf("%c\n",ch);
     printf("%d\n",ch);
     
+    printf("%c\n",ch + 1);
+    printf("%d\n",ch + 1);
     // insert code here...
     printf("Hello, World!\n");
     //一位二进制只能,存放0或者1,或者计算机只能存高电频或低电频 一位用b表示(小写)
