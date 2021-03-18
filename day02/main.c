@@ -22,9 +22,15 @@ int main(int argc, const char * argv[]) {
     getchar();
     ch2 = getchar();
     printf("%c, %c", ch1, ch2);
+    
+    printf("A:%d",'0');
+    printf("B:%d",'\0');
+    printf("C:%d",0);
+    printf("D:%d","0");
+    
     // insert code here...
     printf("Hello, World!\n");
-    //一位二进制只能,存放0或者1,或者计算机只能存高电频或低电频 一位用b表示(小写)
+    //一位二进制只能,存放0或者1,或者计算机只能存高电频或 低电频 一位用b表示(小写)
     //一个字节=8个位 1B = 8b
     //一个字节范围00000000~11111111
     //计算机开辟一个字节空间,就相当于开辟一个8b二进制位,每一位只能存0或1
