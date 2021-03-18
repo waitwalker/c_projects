@@ -23,5 +23,11 @@ int main(int argc, const char * argv[]) {
     printf("%d\n", data3 + data4);
     /// sizeof计算类型的长度
     
+    ///强制类型转换
+    int data5 = 18;
+    double data6 = 123.456;
+    int data7 = (int)data6;
+    printf("data7:%d\n",data7);
+    
     return 0;
 }
