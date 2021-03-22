@@ -29,5 +29,12 @@ int main(int argc, const char * argv[]) {
     int data7 = (int)data6;
     printf("data7:%d\n",data7);
     
+    // 二进制转十进制
+    // 1010 = 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 0 * 2^0
+    // 十进制转换为二进制
+    // 十进制转二进制 不停的除2
+    // %d是有符号输出 需要补码运算
+    // %u %x是原样输出 也就是内存原样输出
+    
     return 0;
 }
