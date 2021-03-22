@@ -46,6 +46,14 @@ int main(int argc, const char * argv[]) {
     printf("\ndata9:%d\n",data9);
     
     /// 具有相同类型的变量 用连续的空间存储 这样的数据结构称为数组
+    /// arr[] arr和[]结合是数组 把元素的个数放入中括号中
+    /// 用元素的类型定义一个普通变量, 从上往下整体替换
+    
+    /// 一维数组定义
+    int num[10] = {1,3,6,8,9,18};
+    for (int i = 0; i < 6; i++) {
+        printf("i:%d\n",num[i]);
+    }
     
     return 0;
 }
