@@ -58,6 +58,8 @@ int main(int argc, const char * argv[]) {
     }
     
     printf("数组的总大小:%lu\n",sizeof(num));
+    printf("数组元素的大小:%lu\n",sizeof(num[0]));
+    printf("数组元素的个数:%lu\n",sizeof(num) / sizeof(num[0]));
     
     return 0;
 }
