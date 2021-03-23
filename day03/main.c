@@ -61,5 +61,16 @@ int main(int argc, const char * argv[]) {
     printf("数组元素的大小:%lu\n",sizeof(num[0]));
     printf("数组元素的个数:%lu\n",sizeof(num) / sizeof(num[0]));
     
+    /// 二维数组:数组的数组
+    /// 分段初始化
+    /// 连续初始化
+    /// 二维数组的遍历
+    int arr[3][4] = {{1,2,3,4},{2,5,5,6},{3,5,2,4}};
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            printf("当前的元素:%d\n",arr[i][j]);
+        }
+    }
+    
     return 0;
 }
