@@ -72,5 +72,17 @@ int main(int argc, const char * argv[]) {
         }
     }
     
+    /// 字符数组
+    /// 每个元素存储的都是ASCII值
+    char ch1[5] = {'h','e','l','l','o'};
+    for (int i = 0; i < 5; i++) {
+        printf("字符数组中的元素：%c\n",ch1[i]);
+        printf("字符数组中的元素ascii值：%d\n",ch1[i]);
+    }
+    
+    /// 数组名的地址就是数组子一个元素的地址
+    printf("数组第一个元素地址：%p\n",&ch1[0]);
+    printf("数组名的地址：%p\n",ch1);
+    
     return 0;
 }
