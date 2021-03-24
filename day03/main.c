@@ -84,5 +84,10 @@ int main(int argc, const char * argv[]) {
     printf("数组第一个元素地址：%p\n",&ch1[0]);
     printf("数组名的地址：%p\n",ch1);
     
+    char ch2[] = {'h','e','h','e'};
+    char ch3[] = "hehe";
+    printf("ch2的空间大小：%lu\n",sizeof(ch2));
+    printf("ch3的空间大小：%lu\n",sizeof(ch3));
+    
     return 0;
 }
