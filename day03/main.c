@@ -89,5 +89,17 @@ int main(int argc, const char * argv[]) {
     printf("ch2的空间大小：%lu\n",sizeof(ch2));
     printf("ch3的空间大小：%lu\n",sizeof(ch3));
     
+    char buf[10] = "";
+//    gets(buf);
+//    printf("获取buf输入的内容：%s",buf);
+    
+    /// @parameter
+    /// 存放的字符串地址
+    /// 能够提取字符串的最大长度
+    /// 表示标准输入设备
+    /// @return 获取到的字符串首地址
+    fgets(buf, sizeof(buf), stdin);
+    printf("buf的内容：%s",buf);
+    
     return 0;
 }
