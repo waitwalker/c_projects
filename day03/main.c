@@ -101,5 +101,10 @@ int main(int argc, const char * argv[]) {
     fgets(buf, sizeof(buf), stdin);
     printf("buf的内容：%s",buf);
     
+    char str[3][16] = {"sxddsf","234safd","s2345ysgdsf"};
+    printf("字符串第0个元素：%s\n",str[0]);
+    printf("字符串第1个元素：%s\n",str[1]);
+    printf("字符串第2个元素：%s\n",str[2]);
+    
     return 0;
 }
