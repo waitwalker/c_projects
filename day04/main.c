@@ -30,6 +30,9 @@ int main(int argc, const char * argv[]) {
     
     printf("数组元素最大值:%d\n",getMaxElement(arr, n));
     printf("数组元素最小值:%d\n",getMinElement(arr, n));
+    
+    int data;
+    printf("局部变量不初始化,内容随机:%d\n",data);
     return 0;
 }
 
