@@ -11,7 +11,8 @@
 
 
 void test(void);
-void test1(int array[5], int num);
+void test1(int array[5], int len);
+int test2(int array[5], int len);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -24,6 +25,8 @@ int main(int argc, const char * argv[]) {
     int arr[5] = {0};
     int n = sizeof(arr) / sizeof(arr[0]);
     test1(arr, n);
+    
+    printf("数组元素最大值:%d\n",test2(arr, n));
     return 0;
 }
 
@@ -38,6 +41,16 @@ void test1(int array[5], int len) {
     for (i = 0; i < len; i++) {
         scanf("%d",&array[i]);
     }
+}
+
+int test2(int array[5], int len) {
+    int max = array[0];
+    for (int i = 0; i < len; i++) {
+        if (max < array[i]) {
+            max = array[i];
+        }
+    }
+    return max;
 }
 
 
