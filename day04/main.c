@@ -6,14 +6,15 @@
 //
 
 #include <stdio.h>
+#include "Tools.h"
 /// 函数的声明
 /// 返回值类型 函数名（形参类型 形参）；
 
 
 void test(void);
-void test1(int array[5], int len);
-int getMaxElement(int array[5], int len);
-int getMinElement(int array[5], int len);
+//void test1(int array[5], int len);
+//int getMaxElement(int array[5], int len);
+//int getMinElement(int array[5], int len);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -37,32 +38,32 @@ void test() {
     printf("This is test.\n");  
 }
 
-void test1(int array[5], int len) {
-    int i = 0;
-    printf("请输入%d个int数据",len);
-    for (i = 0; i < len; i++) {
-        scanf("%d",&array[i]);
-    }
-}
-
-int getMaxElement(int array[5], int len) {
-    int max = array[0];
-    for (int i = 0; i < len; i++) {
-        if (max < array[i]) {
-            max = array[i];
-        }
-    }
-    return max;
-}
-
-
-int getMinElement(int array[5], int len) {
-    int min = array[0];
-    for (int i = 0; i < len; i++) {
-        if (min > array[i]) {
-            min = array[i];
-        }
-    }
-    return min;
-}
+//void test1(int array[5], int len) {
+//    int i = 0;
+//    printf("请输入%d个int数据",len);
+//    for (i = 0; i < len; i++) {
+//        scanf("%d",&array[i]);
+//    }
+//}
+//
+//int getMaxElement(int array[5], int len) {
+//    int max = array[0];
+//    for (int i = 0; i < len; i++) {
+//        if (max < array[i]) {
+//            max = array[i];
+//        }
+//    }
+//    return max;
+//}
+//
+//
+//int getMinElement(int array[5], int len) {
+//    int min = array[0];
+//    for (int i = 0; i < len; i++) {
+//        if (min > array[i]) {
+//            min = array[i];
+//        }
+//    }
+//    return min;
+//}
 
