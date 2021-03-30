@@ -15,7 +15,10 @@ void test(void);
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
+    /// 形参在调用的时候才会开辟空间,形参在函数结束的时候才被释放
+    /// 函数名代表的是函数的入口地址
     test();
+    printf("函数的入口地址:%p\n",test);
     return 0;
 }
 
