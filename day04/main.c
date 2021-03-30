@@ -16,6 +16,8 @@ void test(void);
 //int getMaxElement(int array[5], int len);
 //int getMinElement(int array[5], int len);
 
+int data1 = 100;
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
@@ -31,10 +33,17 @@ int main(int argc, const char * argv[]) {
     printf("数组元素最大值:%d\n",getMaxElement(arr, n));
     printf("数组元素最小值:%d\n",getMinElement(arr, n));
     
-    int data;
+    /// 局部变量不初始化 内容随机
+    int data = 0;
     printf("局部变量不初始化,内容随机:%d\n",data);
+    
+    /// 普通全局变量 定义在函数外部的普通变量
+    printf("普通全局变量:%d\n",data1);
+    
     return 0;
 }
+
+
 
 /// 函数的实现
 void test() {
