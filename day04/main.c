@@ -12,7 +12,8 @@
 
 void test(void);
 void test1(int array[5], int len);
-int test2(int array[5], int len);
+int getMaxElement(int array[5], int len);
+int getMinElement(int array[5], int len);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -26,7 +27,8 @@ int main(int argc, const char * argv[]) {
     int n = sizeof(arr) / sizeof(arr[0]);
     test1(arr, n);
     
-    printf("数组元素最大值:%d\n",test2(arr, n));
+    printf("数组元素最大值:%d\n",getMaxElement(arr, n));
+    printf("数组元素最小值:%d\n",getMinElement(arr, n));
     return 0;
 }
 
@@ -43,7 +45,7 @@ void test1(int array[5], int len) {
     }
 }
 
-int test2(int array[5], int len) {
+int getMaxElement(int array[5], int len) {
     int max = array[0];
     for (int i = 0; i < len; i++) {
         if (max < array[i]) {
@@ -53,4 +55,14 @@ int test2(int array[5], int len) {
     return max;
 }
 
+
+int getMinElement(int array[5], int len) {
+    int min = array[0];
+    for (int i = 0; i < len; i++) {
+        if (min > array[i]) {
+            min = array[i];
+        }
+    }
+    return min;
+}
 
