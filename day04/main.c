@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include "Tools.h"
 
+#define M_DATA 100;
+
 /// 静态全局变量
 static int data8 = 188888;
 
@@ -33,6 +35,10 @@ void staticTest() {
 
 /// 静态函数(局部函数)只能在当前源文件中使用,不能在其他源文件中使用
 int main(int argc, const char * argv[]) {
+    
+    for (int j = 0; j < 20; j++) {
+        printf("当前值:%d\n", j);
+    }
     
     printf("静态全局变量:%d\n",data8);
     
