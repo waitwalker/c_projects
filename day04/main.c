@@ -19,6 +19,7 @@ void test(void);
 int data1 = 100;
 
 void staticTest() {
+    /// 静态局部变量的作用域函数内,生命周期存在于整个进程
     static int a = 100;
     printf("静态局部变量:%d\n",a);
 }
