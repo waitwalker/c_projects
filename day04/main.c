@@ -10,6 +10,7 @@
 
 #define M_DATA 100
 #define M_ADD(a,b) a+b
+#define M_MUL(a,b) a*b
 
 /// 静态全局变量
 static int data8 = 188888;
@@ -42,6 +43,8 @@ int main(int argc, const char * argv[]) {
     }
     
     printf("带参数的宏:%d\n",M_ADD(10, 20));
+    
+    printf("宏只是在预编译的时候单纯的替换:%d\n",M_MUL(10 + 10, 20 + 20));
     
     printf("静态全局变量:%d\n",data8);
     
