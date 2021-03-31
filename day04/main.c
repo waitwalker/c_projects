@@ -7,9 +7,13 @@
 
 #include <stdio.h>
 #include "Tools.h"
+
+/// 静态全局变量
+static int data8 = 188888;
+
+
 /// 函数的声明
 /// 返回值类型 函数名（形参类型 形参）；
-
 
 void test(void);
 //void test1(int array[5], int len);
@@ -28,6 +32,9 @@ void staticTest() {
 }
 
 int main(int argc, const char * argv[]) {
+    
+    printf("静态全局变量:%d\n",data8);
+    
     staticTest();
     staticTest();
     // insert code here...
