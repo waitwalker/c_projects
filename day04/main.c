@@ -18,13 +18,17 @@ void test(void);
 
 int data1 = 100;
 
+/// 不同区域的内存 决定了不同变量的特性
+/// 静态局部变量 存储在全局区
 void staticTest() {
     /// 静态局部变量的作用域函数内,生命周期存在于整个进程
     static int a = 100;
+    a++;
     printf("静态局部变量:%d\n",a);
 }
 
 int main(int argc, const char * argv[]) {
+    staticTest();
     staticTest();
     // insert code here...
     printf("Hello, World!\n");
