@@ -37,6 +37,7 @@ int main(int argc, const char * argv[]) {
     int data = 0;
     printf("局部变量不初始化,内容随机:%d\n",data);
     
+    /// 全局变量不初始化,内容为0
     /// 普通全局变量 定义在函数外部的普通变量
     printf("普通全局变量:%d\n",data1);
     
