@@ -15,6 +15,6 @@
 void test1(int array[5], int len);
 int getMaxElement(int array[5], int len);
 int getMinElement(int array[5], int len);
-
+extern int newData;
 
 #endif /* Tools_h */

@@ -7,6 +7,8 @@
 
 #include "Tools.h"
 
+int newData = 60;
+
 /// 函数的实现
 void test1(int array[5], int len) {
     int i = 0;

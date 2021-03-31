@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     printf("Hello, World!\n");
     /// 形参在调用的时候才会开辟空间,形参在函数结束的时候才被释放
     /// 函数名代表的是函数的入口地址
-    /// 如果函数返回值<=4Byte,存放在寄存器.如果>4Byte存放在栈区.
+    /// 如果函数返回值<=4Byte,存放在寄存器.如果>   4Byte存放在栈区.
     test();
     printf("函数的入口地址:%p\n",test);
     int arr[5] = {0};
@@ -39,6 +39,9 @@ int main(int argc, const char * argv[]) {
     
     /// 普通全局变量 定义在函数外部的普通变量
     printf("普通全局变量:%d\n",data1);
+    
+    
+    printf("extern修饰的变量声明:%d\n",newData);
     
     return 0;
 }
