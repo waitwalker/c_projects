@@ -31,6 +31,7 @@ void staticTest() {
     printf("静态局部变量:%d\n",a);
 }
 
+/// 静态函数(局部函数)只能在当前源文件中使用,不能在其他源文件中使用
 int main(int argc, const char * argv[]) {
     
     printf("静态全局变量:%d\n",data8);
