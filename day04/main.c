@@ -18,7 +18,13 @@ void test(void);
 
 int data1 = 100;
 
+void staticTest() {
+    static int a = 100;
+    printf("静态局部变量:%d\n",a);
+}
+
 int main(int argc, const char * argv[]) {
+    staticTest();
     // insert code here...
     printf("Hello, World!\n");
     /// 形参在调用的时候才会开辟空间,形参在函数结束的时候才被释放
