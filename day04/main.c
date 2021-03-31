@@ -9,6 +9,7 @@
 #include "Tools.h"
 
 #define M_DATA 100
+#define M_ADD(a,b) a+b
 
 /// 静态全局变量
 static int data8 = 188888;
@@ -39,6 +40,8 @@ int main(int argc, const char * argv[]) {
     for (int j = 0; j < M_DATA; j++) {
         printf("当前值:%d\n", j);
     }
+    
+    printf("带参数的宏:%d\n",M_ADD(10, 20));
     
     printf("静态全局变量:%d\n",data8);
     
