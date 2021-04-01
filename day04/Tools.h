@@ -6,6 +6,7 @@
 //
 /// 头文件
 
+/// 这种定义时防止头文件重复导入
 #ifndef Tools_h
 #define Tools_h
 
