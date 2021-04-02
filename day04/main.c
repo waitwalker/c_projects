@@ -45,6 +45,8 @@ int main(int argc, const char * argv[]) {
     /// 负数的反码 就是负数的源码符号位不变 其他位取反
     /// 负数的补码 就是负数的反码加1
     
+    /// 负数(任何数据)在计算机中存储的都是补码
+    
     for (int j = 0; j < M_DATA; j++) {
         printf("当前值:%d\n", j);
     }
