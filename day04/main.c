@@ -37,6 +37,11 @@ void staticTest() {
 
 /// 静态函数(局部函数)只能在当前源文件中使用,不能在其他源文件中使用
 int main(int argc, const char * argv[]) {
+    
+    char data5 = -10;
+    
+    printf("data: %x\n",data5);
+    
     /// 正数的源码 就是数据的二进制(最高位为符号位)
     /// 正数的反码 就是源码本身
     /// 正数的补码 就是源码本身
