@@ -40,7 +40,11 @@ int main(int argc, const char * argv[]) {
     
     char data5 = -10;
     
-    printf("data: %x\n",data5);
+    printf("data5: %x\n",data5);
+    
+    char data6 = 10;
+    
+    printf("data6: %x\n",data6);
     
     /// 正数的源码 就是数据的二进制(最高位为符号位)
     /// 正数的反码 就是源码本身
