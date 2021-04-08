@@ -25,7 +25,13 @@ int main(int argc, const char * argv[]) {
     int *p;
     p = &num;
     
-    printf("%p\n",p);
+    printf("num的首地址:%p\n",&num);
+    printf("p的首地址:%p\n",p);
+    /// *p 星号p表示取p所保存的地址编号所对应的空间内容
+    printf("*p的值:%d\n",*p);
+    
+    *p = 100;
+    printf("重新赋值后的*p的值:%d\n",*p);
     
     // insert code here...
     printf("Hello, World!\n");
