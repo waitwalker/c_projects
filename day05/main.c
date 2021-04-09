@@ -25,6 +25,16 @@ int main(int argc, const char * argv[]) {
     
     /// 指针的跨度
     int num2 = 100;
+    int *p4;
+    p4 = &num2;
+    printf("p4: %p\n",p4);
+    /// p4 + 1 相当于 num2所占用的总字节长度 + 1个字节
+    printf("p4 + 1: %p\n",p4 + 1);
+    
+    short *p5;
+    p5 = &num2;
+    printf("p5: %p\n",p5);
+    printf("p5 + 1: %p\n",p5 + 1);
     
     
     /// 内存是以字节为单位存储的
