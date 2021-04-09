@@ -8,6 +8,25 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
+    
+    /// 指针的取值长度由指针所指向的类型的长度决定
+    int num1 = 0x01020304;
+    int *p1;
+    p1 = &num1;
+    short *p2;
+    p2 = &num1;
+    
+    char *p3;
+    p3 = &num1;
+    
+    printf("p2:%x\n",*p2);
+    
+    printf("p3:%x\n",*p3);
+    
+    /// 指针的跨度
+    int num2 = 100;
+    
+    
     /// 内存是以字节为单位存储的
     
     /// 32位系统中,任何指针(内存地址)都占4Byte
