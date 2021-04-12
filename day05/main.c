@@ -9,6 +9,14 @@
 
 int main(int argc, const char * argv[]) {
     
+    /// 取地址符 和 *解锁音符的区别
+    
+    
+    /// 指针变量的合法初始化
+    int m = 100;
+    int *p8 = &m;
+    printf("p8地址:%p\n",p8);
+    
     /// 指针的取值长度由指针所指向的类型的长度决定
     int num1 = 0x01020304;
     int *p1;
