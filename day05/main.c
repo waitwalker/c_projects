@@ -10,6 +10,10 @@
 int main(int argc, const char * argv[]) {
     
     /// 取地址符 和 *解锁音符的区别
+    int z = 100;
+    int *x = &z;
+    /// &z类型为 int *;
+    /// *x 类型为 int
     
     
     /// 指针变量的合法初始化
