@@ -15,6 +15,12 @@ int main(int argc, const char * argv[]) {
     /// &z类型为 int *;
     /// *x 类型为 int
     
+    void *k = NULL;
+    int c = 20;
+    k = &c;
+    printf("k:%p\n",k);
+    printf("*k:%d\n",*(int *)k);
+    
     
     /// 指针变量的合法初始化
     int m = 100;
