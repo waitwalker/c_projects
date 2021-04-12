@@ -8,6 +8,11 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
+    /// 不要操作没有初始化的指针变量
+    int *m1;
+    printf("m1:%p\n",m1);
+    /// 下面直接报错
+    //printf("m1的值:%d\n",*m1);
     
     /// 取地址符 和 *解锁音符的区别
     int z = 100;
