@@ -8,6 +8,14 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
+    
+    /// 数组名代表的就是第0个元素的地址
+    int arr[5] = {1,23,45,56,33};
+    int *d;
+    d = &arr[3];
+    printf("*d的值:%d\n",*d);
+    
+    
     /// 不要操作没有初始化的指针变量
     int *m1;
     printf("m1:%p\n",m1);
