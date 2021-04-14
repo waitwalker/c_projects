@@ -29,8 +29,14 @@ int main(int argc, const char * argv[]) {
     bool v = (p20 > p10) ? true : false;
     printf("指向同一数组两指针变量比较大小:%d\n", v);
     
+    int *pm = arr;
+    
+    printf("pm:%d\n",*pm++);// 这个相当于指针的移动
+    printf("pm:%d\n",(*pm)++);
+    printf("pm:%d\n",(*pm++));
+    
     /// 不要操作没有初始化的指针变量
-    int *m1;
+    int *m1 = NULL;
     printf("m1:%p\n",m1);
     /// 下面直接报错
     //printf("m1的值:%d\n",*m1);
