@@ -15,7 +15,8 @@ int main(int argc, const char * argv[]) {
     d = &arr[3];
     printf("*d的值:%d\n",*d);
     
-    
+    printf("数组首地址:%p\n",&arr);
+    printf("数组首地址+1:%p\n",&arr + 1);
     /// 不要操作没有初始化的指针变量
     int *m1;
     printf("m1:%p\n",m1);
