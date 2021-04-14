@@ -6,6 +6,9 @@
 //
 
 #include <stdio.h>
+#define bool int
+#define true 1
+#define false 0
 
 int main(int argc, const char * argv[]) {
     
@@ -17,6 +20,15 @@ int main(int argc, const char * argv[]) {
     
     printf("数组首地址:%p\n",&arr);
     printf("数组首地址+1:%p\n",&arr + 1);
+    
+    /// 指向同一数组的指针变量相加减
+    int *p10 = arr;
+    int *p20 = arr + 3;
+    printf("p20 - p10:%ld\n",p20 - p10);
+    
+    bool v = (p20 > p10) ? true : false;
+    printf("指向同一数组两指针变量比较大小:%d\n", v);
+    
     /// 不要操作没有初始化的指针变量
     int *m1;
     printf("m1:%p\n",m1);
