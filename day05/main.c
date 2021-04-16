@@ -12,6 +12,17 @@
 
 int main(int argc, const char * argv[]) {
     
+    /// 数组指针
+    /// 苹果对内存存储有优化
+    int arrNum[5] = {10,20,30,40,50};
+    int (*p12)[5];
+    
+    p12 = &arrNum;
+    printf("%lu\n",sizeof(p12));
+    
+    printf("p12地址:%p\n",p12);
+    printf("p12 + 1地址:%p\n",p12 + 1);
+    
     /// 字符串指针数组
     char *strArr[3] = {"hehehe","hhddd","heiheihei"};
     printf("%lu\n",sizeof(strArr));
