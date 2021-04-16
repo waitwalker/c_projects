@@ -23,6 +23,9 @@ int main(int argc, const char * argv[]) {
     printf("p12地址:%p\n",p12);
     printf("p12 + 1地址:%p\n",p12 + 1);
     
+    
+    printf("%d\n",*(*p12 + 3));
+    
     /// 字符串指针数组
     char *strArr[3] = {"hehehe","hhddd","heiheihei"};
     printf("%lu\n",sizeof(strArr));
