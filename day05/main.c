@@ -12,6 +12,11 @@
 
 int main(int argc, const char * argv[]) {
     
+    /// 字符串指针数组
+    char *strArr[3] = {"hehehe","hhddd","heiheihei"};
+    printf("%lu\n",sizeof(strArr));
+    printf("%s\n",strArr[1]);
+    
     /// 数组名代表的就是第0个元素的地址
     int arr[5] = {1,23,45,56,33};
     int *d;
