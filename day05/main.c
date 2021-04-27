@@ -17,10 +17,23 @@ void swap_data(int data1, int data2) {
     printf("data1:%d; data2:%d\n",data1, data2);
 }
 
+// 修改两个外部变量的值
+void change_data(int *p1, int *p2) {
+    int tmp;
+    tmp = *p1;
+    *p1 = *p2;
+    *p2 = tmp;
+}
+
 int main(int argc, const char * argv[]) {
     
     
-    swap_data(100, 102);
+    //swap_data(100, 102);
+    int data1 = 100;
+    int data2 = 102;
+    printf("data1:%d; data2:%d\n",data1, data2);
+    change_data(&data1, &data2);
+    printf("data1:%d; data2:%d\n",data1, data2);
     
     /// 数组指针
     /// 苹果对内存存储有优化
