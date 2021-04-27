@@ -10,7 +10,17 @@
 #define true 1
 #define false 0
 
+void swap_data(int data1, int data2) {
+    int tmp = data1;
+    data1 = data2;
+    data2 = tmp;
+    printf("data1:%d; data2:%d\n",data1, data2);
+}
+
 int main(int argc, const char * argv[]) {
+    
+    
+    swap_data(100, 102);
     
     /// 数组指针
     /// 苹果对内存存储有优化
