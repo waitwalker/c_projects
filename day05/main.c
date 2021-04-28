@@ -35,7 +35,13 @@ int* get_addr(void) {
     return &num;
 }
 
+int my_add(int a, int b) {
+    return a + b;
+}
+
 int main(int argc, const char * argv[]) {
+    
+    printf("%p\n",my_add);
     
     int *p123 = NULL;
     p123 = get_addr();
