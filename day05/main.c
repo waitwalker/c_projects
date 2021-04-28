@@ -29,7 +29,26 @@ void my_array(int arr[5], int n) {
     printf("arr长度:%lu\n",sizeof(arr));
 }
 
+int* get_addr(void) {
+    int num = 1000;
+    /// 这里不要返回局部变量的地址,因为函数执行完,空间就释放了,内容就可以的
+    return &num;
+}
+
 int main(int argc, const char * argv[]) {
+    
+    int *p123 = NULL;
+    p123 = get_addr();
+    printf("*p123:%d\n",*p123);
+    
+    /// 二维数组
+    /// 三行四列 连续赋值 放满一行再放下一行
+    int am[3][4] = {11,12,13,14,21,22,23,24,31,32,33,34};
+    int row = sizeof(am) / sizeof(am[0]);
+    int col = sizeof(am[0]) / sizeof(am[0][0]);
+    
+    printf("row:%d;col:%d\n",row,col);
+    
     
     int myArr[5] = {0};
     my_array(myArr, 1);
