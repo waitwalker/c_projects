@@ -17,7 +17,7 @@ void swap_data(int data1, int data2) {
     printf("data1:%d; data2:%d\n",data1, data2);
 }
 
-// 修改两个外部变量的值
+// 修改两个外部变量的值,需要将外部变量的地址传递进来,也就是指针作为参数
 void change_data(int *p1, int *p2) {
     int tmp;
     tmp = *p1;
@@ -25,8 +25,14 @@ void change_data(int *p1, int *p2) {
     *p2 = tmp;
 }
 
+void my_array(int arr[5], int n) {
+    printf("arr长度:%lu\n",sizeof(arr));
+}
+
 int main(int argc, const char * argv[]) {
     
+    int myArr[5] = {0};
+    my_array(myArr, 1);
     
     //swap_data(100, 102);
     int data1 = 100;
