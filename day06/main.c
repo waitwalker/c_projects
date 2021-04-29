@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, const char * argv[]) {
     
@@ -17,10 +18,31 @@ int main(int argc, const char * argv[]) {
         printf("malloc err");
         return 0;
     }
-    //memset(addr, 0, sizeof(int));
+    memset(addr, 0, sizeof(int));
     *addr = 1000;
     printf("*addr: %d\n",*addr);
     free(addr);
+    
+    /// 为数组申请内存
+    int n = 5;
+    int *arr = NULL;
+    arr = (int *)malloc(n * sizeof(int));
+    
+    if (arr == NULL) {
+        return 0;
+    }
+    
+    memset(arr, 0, n * sizeof(int));
+    
+    for(int i = 0; i < n; i++) {
+        *(arr+i) = i + 100;
+    }
+    
+    for(int i = 0; i < n; i++) {
+        printf("arr[%d]:%d\n",i,arr[i]);
+    }
+    
+    free(arr);
     
     printf("Hello, World!\n");
     return 0;
