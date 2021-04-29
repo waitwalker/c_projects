@@ -11,6 +11,17 @@
 
 int main(int argc, const char * argv[]) {
     
+    int *p = NULL;
+    p = (int *)calloc(1, sizeof(int));
+    if (p == NULL) {
+        return 0;
+    }
+    
+    *p = 110;
+    printf("%d\n",*p);
+    
+    free(p);
+    
     
     int *addr = NULL;
     addr = (int *)malloc(sizeof(int));
