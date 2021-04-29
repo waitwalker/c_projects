@@ -6,6 +6,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #define bool int
 #define true 1
 #define false 0
@@ -41,8 +42,13 @@ int my_add(int a, int b) {
 
 int main(int argc, const char * argv[]) {
     
+    
     printf("%p\n",my_add);
     
+    /// 将函数指针和函数名建立关系
+    int (*p1234)(int, int) = NULL;
+    p1234 = my_add;
+    printf("*p1234:%d\n",p1234(12,10));
     int *p123 = NULL;
     p123 = get_addr();
     printf("*p123:%d\n",*p123);
