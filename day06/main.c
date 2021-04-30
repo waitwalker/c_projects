@@ -53,6 +53,16 @@ int main(int argc, const char * argv[]) {
         printf("arr[%d]:%d\n",i,arr[i]);
     }
     
+    int *add = NULL;
+    
+    arr = (int *)realloc(arr, (10 * sizeof(int)));
+    for(int i = 5; i < 10; i++) {
+        *(arr+i) = i + 100;
+    }
+    for(int i = 5; i < 10; i++) {
+        printf("arr_add[%d]:%d\n",i,arr[i]);
+    }
+    
     free(arr);
     
     printf("Hello, World!\n");
