@@ -66,5 +66,13 @@ int main(int argc, const char * argv[]) {
     free(arr);
     
     printf("Hello, World!\n");
+    
+    
+    int *pm = (int *)calloc(1, sizeof(int));
+    if (pm != NULL) {
+        free(pm);
+        pm = NULL;
+    }
+    
     return 0;
 }
