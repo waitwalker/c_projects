@@ -14,4 +14,6 @@
 /// 封装获取字符串长度
 int lengthOfStr(const char *s);
 
+void strcpyOperation(const char *s);
+
 #endif /* StringOperation_h */
