@@ -31,3 +31,8 @@ void strcatOperation(const char *s) {
     strncat(b, s, 3);
     printf("字符限制拼接后:%s\n",b);
 }
+
+
+int strcmpOperation(const char *s1, const char *s2) {
+    return strcmp(s1, s2);
+}

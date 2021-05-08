@@ -19,6 +19,12 @@ int main(int argc, const char * argv[]) {
     strcpyOperation(string);
     
     strcatOperation(string);
+    
+    char s1[] = "123456";
+    char s2[] = "123455";
+    
+    printf("字符串比较结果:%d\n",strcmpOperation(s1, s2));
+    
     printf("Hello, World!\n");
     return 0;
 }

@@ -20,4 +20,7 @@ void strcpyOperation(const char *s);
 /// 字符串的拼接
 void strcatOperation(const char *s);
 
+/// 字符串的比较
+int strcmpOperation(const char *s1, const char *s2);
+
 #endif /* StringOperation_h */
