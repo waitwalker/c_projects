@@ -37,3 +37,18 @@ int strcmpOperation(const char *s1, const char *s2) {
     printf("比较前4位:%d\n",strncmp(s1, s2, 4));
     return strcmp(s1, s2);
 }
+
+void strchrOperation(const char *s, char ch) {
+    char *ret = NULL;
+//    ret = strchr(s, ch);
+//    printf("查找后的字符串:%s\n",ret);
+    
+    while (1) {
+        ret = strchr(s, '2');
+        if (ret == NULL) {
+            break;
+        }
+        *ret = '#';
+    }
+    printf("查找&替换后的字符串:%s\n",s);
+}

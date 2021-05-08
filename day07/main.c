@@ -25,6 +25,8 @@ int main(int argc, const char * argv[]) {
     
     printf("字符串比较结果:%d\n",strcmpOperation(s1, s2));
     
+    strchrOperation(string, '3');
+    
     printf("Hello, World!\n");
     return 0;
 }
