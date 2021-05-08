@@ -17,5 +17,7 @@ void strcpyOperation(const char *s) {
     printf("strcpy拷贝后的字符串:%s\n",new);
     
     char ss[124] = "";
-    strncpy(<#char *__dst#>, <#const char *__src#>, <#size_t __n#>)
+    strncpy(ss, s, 3);
+    
+    printf("strncpy拷贝:%s\n",ss);
 }
