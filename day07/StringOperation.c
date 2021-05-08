@@ -52,3 +52,15 @@ void strchrOperation(const char *s, char ch) {
     }
     printf("查找&替换后的字符串:%s\n",s);
 }
+
+void strstrOperation(const char *s1, const char *s2) {
+    char *ret = NULL;
+    while (1) {
+        ret = strstr(s1, s2);
+        if (ret == NULL) {
+            break;
+        }
+        memset(ret, '*', strlen(s2));
+    }
+    printf("查找后&替换后的一些敏感词:%s\n",s1);
+}

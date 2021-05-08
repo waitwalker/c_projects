@@ -27,6 +27,10 @@ int main(int argc, const char * argv[]) {
     
     strchrOperation(string, '3');
     
+    char re[] = "www.sex.hh.sex.com";
+    char re2[] = "sex";
+    strstrOperation(re, re2);
+    
     printf("Hello, World!\n");
     return 0;
 }

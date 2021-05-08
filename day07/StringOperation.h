@@ -26,4 +26,7 @@ int strcmpOperation(const char *s1, const char *s2);
 /// 在字符串中查找字符出现的位置
 void strchrOperation(const char *s, char ch);
 
+/// 字符串的查找
+void strstrOperation(const char *s1, const char *s2);
+
 #endif /* StringOperation_h */
