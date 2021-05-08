@@ -34,5 +34,6 @@ void strcatOperation(const char *s) {
 
 
 int strcmpOperation(const char *s1, const char *s2) {
+    printf("比较前4位:%d\n",strncmp(s1, s2, 4));
     return strcmp(s1, s2);
 }
