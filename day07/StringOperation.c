@@ -25,6 +25,9 @@ void strcpyOperation(const char *s) {
 void strcatOperation(const char *s) {
     char a[12345] = "0";
     strcat(a, s);
-    
     printf("拼接后的字符串:%s\n",a);
+    
+    char b[125] = "a";
+    strncat(b, s, 3);
+    printf("字符限制拼接后:%s\n",b);
 }
