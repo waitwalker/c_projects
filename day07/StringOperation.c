@@ -21,3 +21,10 @@ void strcpyOperation(const char *s) {
     
     printf("strncpy拷贝:%s\n",ss);
 }
+
+void strcatOperation(const char *s) {
+    char a[12345] = "0";
+    strcat(a, s);
+    
+    printf("拼接后的字符串:%s\n",a);
+}

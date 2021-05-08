@@ -14,6 +14,10 @@
 /// 封装获取字符串长度
 int lengthOfStr(const char *s);
 
+/// 字符串拷贝
 void strcpyOperation(const char *s);
+
+/// 字符串的拼接
+void strcatOperation(const char *s);
 
 #endif /* StringOperation_h */

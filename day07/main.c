@@ -17,6 +17,8 @@ int main(int argc, const char * argv[]) {
     printf("字符串的存储长度:%lu\n",sizeof(string));//这里末尾会有一个\0
     
     strcpyOperation(string);
+    
+    strcatOperation(string);
     printf("Hello, World!\n");
     return 0;
 }
