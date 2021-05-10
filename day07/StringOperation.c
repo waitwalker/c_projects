@@ -63,4 +63,6 @@ void strstrOperation(const char *s1, const char *s2) {
         memset(ret, '*', strlen(s2));
     }
     printf("查找后&替换后的一些敏感词:%s\n",s1);
+    
+    /// *(a+i) 展开相当于 a[i]
 }
