@@ -65,4 +65,8 @@ void strstrOperation(const char *s1, const char *s2) {
     printf("查找后&替换后的一些敏感词:%s\n",s1);
     
     /// *(a+i) 展开相当于 a[i]
+    
+    /// int *p = NULL;
+    
+    /// 对于指向同一数组的指针变量 不能进行+操作
 }
