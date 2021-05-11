@@ -78,10 +78,24 @@ void strstrOperation(const char *s1, const char *s2) {
     
 }
 
+int myAtoi(char *str) {
+    int sum = 0;
+    while (*str != '\0' && (*str >= '0' && *str <= '9')) {
+        sum = sum *10 + *str - '0';
+        str++;
+    }
+    return sum;
+}
+
 void atoiOpertaion(const char *s) {
     int a = atoi(s);
     printf("转换成整型的操作:%d\n",a);
     
     long b = atol(s);
     printf("转换成长整型的操作:%ld\n",b);
+    char str[128] = "";
+    printf("请输入字符串:\n");
+    scanf("%s",str);
+    printf("my_atoi:%s\n",str);
+    
 }
