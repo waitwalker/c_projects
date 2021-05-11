@@ -33,4 +33,7 @@ void strstrOperation(const char *s1, const char *s2);
 /// 将字符串转换成数值型操作
 void atoiOpertaion(const char *s);
 
+/// 字符串切割函数
+void sstrtokOpertaions(const char *s);
+
 #endif /* StringOperation_h */

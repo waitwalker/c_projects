@@ -32,6 +32,8 @@ int main(int argc, const char * argv[]) {
     strstrOperation(re, re2);
     
     atoiOpertaion(s1);
+    char *ss = "12:34:56";
+    //strtokOpertaions(ss, ":");
     
     printf("Hello, World!\n");
     return 0;

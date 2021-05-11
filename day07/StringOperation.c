@@ -93,9 +93,29 @@ void atoiOpertaion(const char *s) {
     
     long b = atol(s);
     printf("转换成长整型的操作:%ld\n",b);
-    char str[128] = "";
-    printf("请输入字符串:\n");
-    scanf("%s",str);
-    printf("my_atoi:%s\n",str);
+//    char str[128] = "";
+//    printf("请输入字符串:\n");
+//    scanf("%s",str);
+//    printf("my_atoi:%s\n",str);
     
+    char buf[] = "123:456:678";
+    
+    char *arr[32] = {NULL};
+    int i = 0;
+    arr[i] = strtok(buf, ":");
+    while (arr[i] != NULL) {
+        i++;
+        arr[i] = strtok(NULL, ":");
+    }
+    int j = 0;
+    while (arr[j] != NULL) {
+        printf("%s\n",arr[j]);
+        j++;
+    }
 }
+
+//void sstrtokOpertaions(char *s) {
+//    char *str[32] = {NULL};
+////    str = strtok(s, ":");
+////    printf("切割完的字符串:%s\n",str);
+//}
