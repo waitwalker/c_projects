@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /// 封装获取字符串长度
 int lengthOfStr(const char *s);
@@ -28,5 +29,8 @@ void strchrOperation(const char *s, char ch);
 
 /// 字符串的查找
 void strstrOperation(const char *s1, const char *s2);
+
+/// 将字符串转换成数值型操作
+void atoiOpertaion(const char *s);
 
 #endif /* StringOperation_h */

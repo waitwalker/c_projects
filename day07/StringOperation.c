@@ -74,4 +74,14 @@ void strstrOperation(const char *s1, const char *s2) {
     /// 如果二维数组的列数和指针数组的元素个数一样,并且把二维数组的指针(数组名)赋值给指针数组,则指针数组等价于二维数组
     
     /// a[2][3] 第i行j列的元素地址引用 a代表行地址 a[i]+j 展开就是*(a+i) + j; a+i表示第i行的地址,第(a + i)取*表示当前行第0列的列地址,然后再+j表示第i行第j列的地址
+    
+    
+}
+
+void atoiOpertaion(const char *s) {
+    int a = atoi(s);
+    printf("转换成整型的操作:%d\n",a);
+    
+    long b = atol(s);
+    printf("转换成长整型的操作:%ld\n",b);
 }
