@@ -28,4 +28,8 @@ void lengthOfStuct(void) {
         "张世超"
     };
     printf("结构体初始化:%d %d %s\n",bob.num, bob.age, bob.name);
+    
+    /// 结构体全部清0
+    memset(&bob, 0, sizeof(bob));
+    printf("结构体初始化:%d %d %s\n",bob.num, bob.age, bob.name);
 }
