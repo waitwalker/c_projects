@@ -37,6 +37,8 @@ int main(int argc, const char * argv[]) {
     
     sprintfOperation();
     
+    constOperation();
+    
     printf("Hello, World!\n");
     return 0;
 }

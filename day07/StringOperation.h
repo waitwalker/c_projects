@@ -36,6 +36,10 @@ void atoiOpertaion(const char *s);
 /// 字符串切割函数
 void strtokOpertaions(char *s);
 
+/// 字符串的提取
 void sprintfOperation(void);
+
+/// const 关键字
+void constOperation(void);
 
 #endif /* StringOperation_h */

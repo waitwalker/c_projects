@@ -169,3 +169,23 @@ void sprintfOperation(void) {
     printf("提取后的数据:%d\n",data4);
 }
 
+void constOperation(void) {
+    const int a = 10;
+    //a = 100;
+    printf("%d\n",a);
+    printf("a的地址:%p\n",&a);
+    *(int *) (&a) = 10000;
+    printf("通过地址赋值:%d\n",a);
+    
+    int num = 200;
+    
+    /// const 修饰 *p
+    const int *p = &num;
+    
+    printf("*p的值:%d\n",*p);
+    
+    //*p = 1000;
+    printf("*p的值:%d\n",*p);
+    
+}
+
