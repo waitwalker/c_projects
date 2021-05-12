@@ -65,4 +65,13 @@ void structArray(void) {
     for (int i = 0; i < n; i++) {
         printf("数组中结构体成员:%d %d %s\n",arr[i].num,arr[i].age,arr[i].name);
     }
+    memset(arr, 0, sizeof(arr));
+    printf("请输入5个学生信息:");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d %d %s",&arr[i].num, &arr[i].age, arr[i].name);
+    }
+    
+    for (int i = 0; i < n; i++) {
+        printf("输入的数组中结构体成员:%d %d %s\n",arr[i].num,arr[i].age,arr[i].name);
+    }
 }
