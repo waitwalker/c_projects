@@ -158,5 +158,14 @@ void sprintfOperation(void) {
     char buf3[] = "";
     sscanf("dabcdfefdjkk", "%[^ek]",buf3);
     printf("提取到的数据:%s\n",buf3);
+    char name[32] = "";
+    char addr[32] = "";
+    sscanf("lldd@1000phone.com", "%[^@]%*1s%[^.]",name,addr);
+    printf("提取到的数据:%s\n",name);
+    printf("提取到的数据:%s\n",addr);
+    
+    int data4 = 0;
+    sscanf("[123.143.4][12.97]好的颠三倒四", "[%d.143.4][12.97]好的颠三倒四",&data4);
+    printf("提取后的数据:%d\n",data4);
 }
 
