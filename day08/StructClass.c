@@ -71,7 +71,11 @@ void structArray(void) {
         scanf("%d %d %s",&arr[i].num, &arr[i].age, arr[i].name);
     }
     
+    int sum = 0;
     for (int i = 0; i < n; i++) {
         printf("输入的数组中结构体成员:%d %d %s\n",arr[i].num,arr[i].age,arr[i].name);
+        sum += arr[i].age;
     }
+    
+    printf("平均年龄为:%d\n",sum / 5);
 }
