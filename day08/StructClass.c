@@ -30,12 +30,21 @@ void lengthOfStuct(void) {
     printf("结构体初始化:%d %d %s\n",bob.num, bob.age, bob.name);
     
     /// 结构体全部清0
-    memset(&bob, 0, sizeof(bob));
+    //memset(&bob, 0, sizeof(bob));
     printf("结构体初始化:%d %d %s\n",bob.num, bob.age, bob.name);
     
     struct stu meimei;
     memset(&meimei, 0, sizeof(meimei));
     printf("请输入分数 年龄 姓名:");
     scanf("%d %d %s",&meimei.num, &meimei.age, meimei.name);
+    printf("\nmeimei结构体初始化:%d %d %s\n",meimei.num, meimei.age, meimei.name);
+    
+    meimei.age = bob.age;
+    strcpy(meimei.name, bob.name);
+    meimei.num = bob.num;
+    printf("\nmeimei结构体初始化:%d %d %s\n",meimei.num, meimei.age, meimei.name);
+    
+    /// 直接赋值
+    meimei = lucy;
     printf("\nmeimei结构体初始化:%d %d %s\n",meimei.num, meimei.age, meimei.name);
 }
