@@ -187,5 +187,10 @@ void constOperation(void) {
     //*p = 1000;
     printf("*p的值:%d\n",*p);
     
+    int * const p1 = &num;
+    //p1 = &num;
+    *p1 = 12000;
+    printf("*p1:%d\n",*p1);
+    
 }
 
