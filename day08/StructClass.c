@@ -50,3 +50,19 @@ void lengthOfStuct(void) {
     memcpy(&bob, &meimei, sizeof(struct stu));
     printf("\nmeimei结构体初始化:%d %d %s\n",meimei.num, meimei.age, meimei.name);
 }
+
+void structArray(void) {
+    struct stu arr[5] = {
+        {100,6,"zhangsan1"},
+        {100,7,"zhangsan2"},
+        {100,8,"zhangsan3"},
+        {100,9,"zhangsan4"},
+        {100,10,"zhangsan5"},
+    };
+    
+    printf("结构体数组:%lu\n",sizeof(arr));
+    int n = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < n; i++) {
+        printf("数组中结构体成员:%d %d %s\n",arr[i].num,arr[i].age,arr[i].name);
+    }
+}

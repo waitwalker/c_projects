@@ -13,4 +13,7 @@
 /// 结构体大小
 void lengthOfStuct(void);
 
+/// 结构体数组
+void structArray(void);
+
 #endif /* StructClass_h */

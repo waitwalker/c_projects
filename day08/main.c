@@ -9,7 +9,8 @@
 #include "StructClass.h"
 
 int main(int argc, const char * argv[]) {
-    lengthOfStuct();
+    //lengthOfStuct();
+    structArray();
     printf("Hello, World!\n");
     return 0;
 }
