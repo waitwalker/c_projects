@@ -143,5 +143,20 @@ void sprintfOperation(void) {
     int data1 = 0;
     sscanf("1234 5678", "%*5s%d",&data1);
     printf("拆包后的数据:%d\n",data1);
+    int data2 = 0;
+    int data3 = 0;
+    sscanf("12345678", "%*2d%2d%*2d%d",&data2,&data3);
+    printf("拆包后的数据:%d\n%d\n",data2,data3);
+    
+    char buf1[124] ="";
+    sscanf("aaBBcEdef", "%[aBc]",buf1);
+    printf("buf1提取后的字符串:%s\n",buf1);
+    char buf2[] = "";
+    sscanf("abcdEfa","%[a-z]",buf2);
+    printf("提取后的字符串:%s\n",buf2);
+    
+    char buf3[] = "";
+    sscanf("dabcdfefdjkk", "%[^ek]",buf3);
+    printf("提取到的数据:%s\n",buf3);
 }
 
