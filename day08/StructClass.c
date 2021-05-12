@@ -47,4 +47,6 @@ void lengthOfStuct(void) {
     /// 直接赋值
     meimei = lucy;
     printf("\nmeimei结构体初始化:%d %d %s\n",meimei.num, meimei.age, meimei.name);
+    memcpy(&bob, &meimei, sizeof(struct stu));
+    printf("\nmeimei结构体初始化:%d %d %s\n",meimei.num, meimei.age, meimei.name);
 }
