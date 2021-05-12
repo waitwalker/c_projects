@@ -139,5 +139,9 @@ void sprintfOperation(void) {
     int data = 0;
     sscanf("1234 5678", "%*s %d",&data);
     printf("解包后的数据:%d\n",data);
+    
+    int data1 = 0;
+    sscanf("1234 5678", "%*5s%d",&data1);
+    printf("拆包后的数据:%d\n",data1);
 }
 
