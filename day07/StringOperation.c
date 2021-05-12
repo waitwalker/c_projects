@@ -132,4 +132,12 @@ void sprintfOperation(void) {
     int newDay = 0;
     sscanf(newBuf, "%d年%d月%d日",&newYear,&newMonth,&newDay);
     printf("解包后的数据:%d %d %d\n",newYear, newMonth, newDay);
+    char str[128] = "";
+    
+    sscanf(buf, "2021%s5月12日",str);
+    printf("字符串的解包:%s\n",str);
+    int data = 0;
+    sscanf("1234 5678", "%*s %d",&data);
+    printf("解包后的数据:%d\n",data);
 }
+
