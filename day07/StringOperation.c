@@ -114,8 +114,15 @@ void atoiOpertaion(const char *s) {
     }
 }
 
-//void sstrtokOpertaions(char *s) {
-//    char *str[32] = {NULL};
-////    str = strtok(s, ":");
-////    printf("切割完的字符串:%s\n",str);
-//}
+void strtokOpertaions(char *s) {
+    
+}
+
+void sprintfOperation(void) {
+    int year = 2021;
+    int month = 5;
+    int day = 12;
+    char buf[128] = "";
+    sprintf(buf, "%d年%d月%d日",year,month,day);
+    printf("组装好的字符串:%s\n",buf);
+}
