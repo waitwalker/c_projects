@@ -125,4 +125,11 @@ void sprintfOperation(void) {
     char buf[128] = "";
     sprintf(buf, "%d年%d月%d日",year,month,day);
     printf("组装好的字符串:%s\n",buf);
+    
+    char newBuf[] = "2021年5月12日";
+    int newYear = 0;
+    int newMonth = 0;
+    int newDay = 0;
+    sscanf(newBuf, "%d年%d月%d日",&newYear,&newMonth,&newDay);
+    printf("解包后的数据:%d %d %d\n",newYear, newMonth, newDay);
 }
