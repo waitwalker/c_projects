@@ -162,4 +162,17 @@ void structScanf(void) {
     for (int i = 0; i < n; i ++) {
         printf("第%d个结构体成员:%d %d %s\n",i,arr[i].num,arr[i].age,arr[i].name);
     }
+    
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 -i; j++) {
+            if (arr[j].age > arr[j+1].age ) {
+                struct stu tmp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = tmp;
+            }
+        }
+    }
+    for (int i = 0; i < n; i ++) {
+        printf("第%d个结构体成员:%d %d %s\n",i,arr[i].num,arr[i].age,arr[i].name);
+    }
 }
