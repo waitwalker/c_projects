@@ -103,4 +103,44 @@ void bubbleSort(void) {
     }
     
     printf("排序完的数组:%s\n",buf);
+    
+    printf("请输入数组元素个数:\n");
+    int n = 0;
+    scanf("%d",&n);
+    /// 根据元素个数申请空间
+    int *array = NULL;
+    array = (int *)calloc(n, sizeof(int));
+    if (array == NULL) {
+        return;
+    }
+    
+    printf("请输入%d个int型数据\n",n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d",array + i);/// 第i个元素的地址
+    }
+    
+    /// 排序
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (array[j] > array[j+ 1]) {
+                int tmp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = tmp;
+            }
+        }
+    }
+    
+    /// 遍历
+    char str[1024] = "";
+    for (int i = 0; i < n; i++) {
+        sprintf(str, "%s--%d(%d)",str,array[i],i);
+    }
+    
+    printf("拼接完的数组元素:%s\n",str);
+    
+    ///释放空间
+    if (array != NULL) {
+        free(array);
+        array = NULL;
+    }
 }
