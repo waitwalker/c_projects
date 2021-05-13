@@ -16,4 +16,7 @@ void lengthOfStuct(void);
 /// 结构体数组
 void structArray(void);
 
+/// 冒泡排序
+void bubbleSort(void);
+
 #endif /* StructClass_h */

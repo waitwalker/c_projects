@@ -7,6 +7,8 @@
 
 #include "StructClass.h"
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 struct stu {
     int num;
@@ -78,4 +80,27 @@ void structArray(void) {
     }
     
     printf("平均年龄为:%d\n",sum / 5);
+}
+
+void bubbleSort(void) {
+    int arr[6] = {12,46,56,22,77,90};
+    
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]) - 1; i++) {
+        for (int j = 0; j < sizeof(arr) / sizeof(arr[0]) - 1 - i; j++) {
+            printf("当前第%d轮 第%d个数(%d)和第%d个数(%d)的比较\n",i,j,arr[j],j+1,arr[j+1]);
+            /// 正序排列 从小到大
+            if (arr[j] > arr[j+1]) {
+                int tmp = 0;
+                tmp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = tmp;
+            }
+        }
+    }
+    char buf[256] = "";
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+        sprintf(buf, "%s--%d(%d)",buf,arr[i],i);
+    }
+    
+    printf("排序完的数组:%s\n",buf);
 }
