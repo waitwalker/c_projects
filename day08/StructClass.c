@@ -120,14 +120,20 @@ void bubbleSort(void) {
     }
     
     /// 排序
+    int flag = 0;
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - 1 - i; j++) {
             if (array[j] > array[j+ 1]) {
                 int tmp = array[j];
                 array[j] = array[j+1];
                 array[j+1] = tmp;
+                flag = 1;
             }
         }
+        if (flag == 0) {
+            break;
+        }
+        printf("经过了%d轮排序\n",i);
     }
     
     /// 遍历
@@ -142,5 +148,18 @@ void bubbleSort(void) {
     if (array != NULL) {
         free(array);
         array = NULL;
+    }
+}
+
+void structScanf(void) {
+    struct stu arr[5];
+    int n = sizeof(arr) / sizeof(arr[0]);
+    memset(arr, 0, sizeof(arr));
+    printf("请输入%d个学生信息\n",n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d %d %s",&arr[i].num, &arr[i].age, arr[i].name);
+    }
+    for (int i = 0; i < n; i ++) {
+        printf("第%d个结构体成员:%d %d %s\n",i,arr[i].num,arr[i].age,arr[i].name);
     }
 }

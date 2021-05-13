@@ -19,4 +19,7 @@ void structArray(void);
 /// 冒泡排序
 void bubbleSort(void);
 
+/// 结构体数组获取键盘输入
+void structScanf(void);
+
 #endif /* StructClass_h */
