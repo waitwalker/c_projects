@@ -12,7 +12,8 @@ int main(int argc, const char * argv[]) {
     //lengthOfStuct();
     //structArray();
     //bubbleSort();
-    structScanf();
+    //structScanf();
+    typedefOperation();
     printf("Hello, World!\n");
     return 0;
 }

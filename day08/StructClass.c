@@ -16,6 +16,8 @@ struct stu {
     char name[32];
 };
 
+typedef struct stu StuStruct;
+
 void lengthOfStuct(void) {
     printf("结构体占用空间大小:%lu\n",sizeof(struct stu));
     struct stu lucy; /// lucy是局部变量
@@ -175,4 +177,14 @@ void structScanf(void) {
     for (int i = 0; i < n; i ++) {
         printf("第%d个结构体成员:%d %d %s\n",i,arr[i].num,arr[i].age,arr[i].name);
     }
+}
+
+void typedefOperation(void) {
+    StuStruct lucy = {
+        100,
+        12,
+        "张三丰"
+    };
+    
+    printf("取别名后定义一个结构体变量:%d %d %s\n",lucy.num, lucy.age, lucy.name);
 }

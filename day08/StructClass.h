@@ -22,4 +22,7 @@ void bubbleSort(void);
 /// 结构体数组获取键盘输入
 void structScanf(void);
 
+/// 给已有的类型取别名
+void typedefOperation(void);
+
 #endif /* StructClass_h */
