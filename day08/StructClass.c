@@ -18,6 +18,8 @@ struct stu {
 
 typedef struct stu StuStruct;
 
+typedef int * intPoint;
+
 void lengthOfStuct(void) {
     printf("结构体占用空间大小:%lu\n",sizeof(struct stu));
     struct stu lucy; /// lucy是局部变量
@@ -185,6 +187,11 @@ void typedefOperation(void) {
         12,
         "张三丰"
     };
-    
+    int num = 10;
+    intPoint p = &num;
     printf("取别名后定义一个结构体变量:%d %d %s\n",lucy.num, lucy.age, lucy.name);
+    printf("指针指向的空间内容:%d\n",*p);
+    
+    StuStruct *p1 = &lucy;
+    printf("通过指向获取结构体变量内容:%s\n",p1->name);
 }
