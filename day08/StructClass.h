@@ -25,4 +25,7 @@ void structScanf(void);
 /// 给已有的类型取别名
 void typedefOperation(void);
 
+/// 结构体指针
+void structPointer(void);
+
 #endif /* StructClass_h */

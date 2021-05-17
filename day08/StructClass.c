@@ -189,9 +189,14 @@ void typedefOperation(void) {
     };
     int num = 10;
     intPoint p = &num;
-    printf("取别名后定义一个结构体变量:%d %d %s\n",lucy.num, lucy.age, lucy.name);
+    printf("取别名后定义一个结构体变量:%d %d %s\n",(&lucy)->num, lucy.age, lucy.name);
     printf("指针指向的空间内容:%d\n",*p);
     
     StuStruct *p1 = &lucy;
     printf("通过指向获取结构体变量内容:%s\n",p1->name);
+}
+
+
+void structPointer(void) {
+    
 }
