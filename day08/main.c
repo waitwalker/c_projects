@@ -13,7 +13,8 @@ int main(int argc, const char * argv[]) {
     //structArray();
     //bubbleSort();
     //structScanf();
-    typedefOperation();
+    //typedefOperation();
+    structPointer();
     printf("Hello, World!\n");
     return 0;
 }

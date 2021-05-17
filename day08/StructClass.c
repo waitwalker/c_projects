@@ -198,5 +198,21 @@ void typedefOperation(void) {
 
 
 void structPointer(void) {
+    StuStruct *p = NULL;
     
+    p = (StuStruct *)calloc(1, sizeof(StuStruct));
+    if (p == NULL) {
+        printf("error");
+        return;
+    }
+    
+    printf("请输入一个学生信息:num age name\n");
+    scanf("%d %d %s",&p->num,&p->age,(*p).name);
+    
+    /// 遍历结构体中的成员
+    printf("num:%d age: %d name:%s\n",p->num, p->age,p->name);
+    if (p != NULL) {
+        free(p);
+        p = NULL;
+    }
 }
