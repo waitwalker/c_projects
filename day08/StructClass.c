@@ -16,6 +16,18 @@ struct stu {
     char name[32];
 };
 
+struct person {
+    char c;
+    int i;
+};
+
+struct Resource {
+    int a;
+    short b;
+    char c;
+    short i;
+};
+
 typedef struct stu StuStruct;
 
 typedef int * intPoint;
@@ -250,9 +262,20 @@ void inputData(StuStruct *arr, int n) {
 }
 
 void structUse(void) {
+    
+    struct Resource resource1;
+    printf("%lu\n",sizeof(resource1));
+    printf("%p\n",&resource1.a);
+    printf("%p\n",&resource1.b);
+    printf("%p\n",&resource1.c);
+    printf("%p\n",&resource1.i);
+    
+    struct person person1;
+    printf("%lu\n",sizeof(person1));
+    printf("%p\n%p\n",&person1.c,&person1.i);
     int n = 0;
     StuStruct *arr = NULL;
-    printf("请输入学生个数:");
+    printf("请输入学生个数:\n");
     scanf("%d",&n);
     /// 根据学生的个数, 从堆区申请空间
     arr = getArrayAddr(n);
