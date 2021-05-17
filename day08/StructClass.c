@@ -237,3 +237,38 @@ void test(void) {
     
     myPrint(&lucy);
 }
+
+StuStruct *getArrayAddr(int n) {
+    return (StuStruct *)calloc(n, sizeof(StuStruct));
+}
+
+void inputData(StuStruct *arr, int n) {
+    printf("请输入%d个学生信息\n",n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d %d %s",&arr[i].num, &arr[i].age,arr[i].name);
+    }
+}
+
+void structUse(void) {
+    int n = 0;
+    StuStruct *arr = NULL;
+    printf("请输入学生个数:");
+    scanf("%d",&n);
+    /// 根据学生的个数, 从堆区申请空间
+    arr = getArrayAddr(n);
+    if (arr == NULL) {
+        printf("err");
+        return;
+    }
+    /// 从键盘 给结构体数组arr 输入数据
+    inputData(arr, n);
+    
+    for (int i = 0; i < n; i++) {
+        printf("num:%d age:%d name:%s\n",arr[i].num,arr[i].age,arr[i].name);
+    }
+    
+    if (arr != NULL) {
+        free(arr);
+        arr = NULL;
+    }
+}

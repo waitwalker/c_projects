@@ -28,4 +28,7 @@ void typedefOperation(void);
 /// 结构体指针
 void structPointer(void);
 
+/// 结构体综合运用
+void structUse(void);
+
 #endif /* StructClass_h */
