@@ -31,4 +31,7 @@ void structPointer(void);
 /// 结构体综合运用
 void structUse(void);
 
+/// 结构体嵌套结构体
+void structStructOperation(void);
+
 #endif /* StructClass_h */

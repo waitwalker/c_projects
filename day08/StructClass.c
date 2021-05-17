@@ -10,6 +10,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+struct Data {
+    int a;
+    int b;
+};
+
+typedef struct Data DataStruct;
+
+struct Data2 {
+    int c;
+    int d;
+    DataStruct e;
+};
+
 struct stu {
     int num;
     int age;
@@ -294,4 +307,9 @@ void structUse(void) {
         free(arr);
         arr = NULL;
     }
+}
+
+void structStructOperation(void) {
+    struct Data2 data = {1,2,{3,4}};
+    printf("%d\n",data.e.a);
 }
