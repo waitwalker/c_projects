@@ -216,3 +216,24 @@ void structPointer(void) {
         p = NULL;
     }
 }
+
+void mySetStuData(StuStruct *p) {
+    printf("请输入一个学生的信息num age name\n");
+    scanf("%d %d %s",&p->num,&p->age,p->name);
+}
+
+void myPrint(const StuStruct *p) {
+    printf("num:%d age:%d name:%s",p->num,p->age,p->name);
+}
+
+void test(void) {
+    StuStruct lucy;
+    
+    /// 初始化 给结构体初始化
+    memset(&lucy, 0, sizeof(lucy));
+    
+    /// 定义一个函数 给lucy成员获取键盘输入
+    mySetStuData(&lucy);
+    
+    myPrint(&lucy);
+}
