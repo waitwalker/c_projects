@@ -14,6 +14,17 @@ union Data {
 };
 
 
+enum Type{
+    TypeA = 0,
+    TypeB = 1,
+    TypeC = 2,
+};
+
+void enumOperation(void) {
+    enum Type a = TypeA;
+    printf("%d\n",a);
+}
+
 void unionOPeration(void) {
     union Data data;
     printf("%lu\n",sizeof(union Data));
@@ -21,4 +32,7 @@ void unionOPeration(void) {
     data.b = 20;
     data.c = 30;
     printf("%d\n",data.a+data.b+data.c);
+    
+    enumOperation();
 }
+
