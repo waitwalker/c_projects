@@ -317,12 +317,13 @@ void structStructOperation(void) {
 typedef struct {
     /// 相邻位域可以压缩 但是不能超过自身类型大小
     unsigned char a:2;
-    unsigned char b:6;
+    unsigned char :2;/// 无意义位段 只是占位 2位
+    unsigned char b:2;
 } Data2;
 
 void bitFieldOperation(void) {
     printf("%lu\n",sizeof(Data2));
     Data2 data;
-    data.a = 6;/// 位段不能进行赋值操作
+    data.a = 3;/// 位段不能进行超过其基本类型的赋值操作
     printf("%d\n",data.a);
 }
