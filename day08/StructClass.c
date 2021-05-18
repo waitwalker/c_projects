@@ -322,4 +322,7 @@ typedef struct {
 
 void bitFieldOperation(void) {
     printf("%lu\n",sizeof(Data2));
+    Data2 data;
+    data.a = 6;/// 位段不能进行赋值操作
+    printf("%d\n",data.a);
 }
