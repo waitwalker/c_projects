@@ -10,4 +10,6 @@
 
 #include <stdio.h>
 
+void nodeOperation(void);
+
 #endif /* NodeClass_h */
