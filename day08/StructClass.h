@@ -34,4 +34,7 @@ void structUse(void);
 /// 结构体嵌套结构体
 void structStructOperation(void);
 
+/// 位段操作
+void bitFieldOperation(void);
+
 #endif /* StructClass_h */

@@ -16,7 +16,8 @@ int main(int argc, const char * argv[]) {
     //typedefOperation();
     //structPointer();
     //structUse();
-    structStructOperation();
+    //structStructOperation();
+    bitFieldOperation();
     printf("Hello, World!\n");
     return 0;
 }
