@@ -36,6 +36,32 @@ STU *insertLink(STU *head, STU tmp) {
     return head;
 }
 
+STU *insertLinkEnd(STU *head, STU tmp) {
+    ///1. 为待插入的节点申请空间 必须要做的
+    STU *pi = (STU *)calloc(1, sizeof(STU));
+    if (pi == NULL) {
+        perror("pi error");
+        return head;
+    }
+    ///2. 将tmp数据赋值到*pi里面
+    *pi = tmp;
+    pi->next = NULL;
+    if (head == NULL) {
+        head = pi;
+    } else {
+        STU *pd = head;
+        ///2.1 先找到尾部
+        while (pd->next != NULL) {
+            pd = pd->next;
+            ///2.2 找到尾部的next 为 NULL
+            if (pd->next == NULL) {
+                pd->next = pi;
+            }
+        }
+    }
+    return head;
+}
+
 void printLink(STU *head) {
     if (head == NULL) {
         printf("链表不存在\n");

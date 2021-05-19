@@ -22,8 +22,11 @@ typedef struct stu {
     
 } STU;
 
-/// 插入链表
+/// 插入链表 将节点插入在head之前
 STU *insertLink(STU *head, STU tmp);
+
+/// 插入链表 将节点插入在链表的尾部
+STU *insertLinkEnd(STU *head, STU tmp);
 
 /// 链表的遍历
 void printLink(STU *head);
