@@ -6,3 +6,32 @@
 //
 
 #include "link.h"
+#include <stdlib.h>
+
+/// 做的是头部之前插入 要把这个节点插在head之前
+STU *insertLink(STU *head, STU tmp) {
+    /// 第一次的时候链表应该是空的
+    ///1. 从堆区空间申请一个待插入的节点空间
+    STU *pi = (STU *)calloc(1, sizeof(STU));
+    if (pi == NULL) {
+        perror("error");
+        return head;
+    }
+    
+    ///2. 将tmp值赋值给 *pi
+    *pi = tmp;
+    pi->next = NULL;
+    
+    //3. 插入链表
+    if (head == NULL) {
+        /// 链表不存在
+        head = pi;
+    } else {
+        /// 链表存在(链表头部插入)
+        /// 第一步将pi插入到head之前,指向旧的头部
+        pi->next = head;
+        /// 第二步将head移到最前面, head指向最新的头节点
+        head = pi;
+    }
+    return head;
+}

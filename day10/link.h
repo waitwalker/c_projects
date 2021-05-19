@@ -22,5 +22,7 @@ typedef struct stu {
     
 } STU;
 
+/// 插入链表
+STU *insertLink(STU *head, STU tmp);
 
 #endif /* link_h */
