@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A098A5B26549B4C006EA440 /* link.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A098A5A26549B4C006EA440 /* link.c */; };
 		6A1A5646264BB5BF0071DAC9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A5645264BB5BF0071DAC9 /* main.c */; };
 		6A1A564C264BB5D60071DAC9 /* StructClass.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A564B264BB5D60071DAC9 /* StructClass.c */; };
 		6A607EC72612B35100993DC4 /* Tools.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A607EC62612B35100993DC4 /* Tools.c */; };
@@ -129,6 +130,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A098A5926549B4C006EA440 /* link.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = link.h; sourceTree = "<group>"; };
+		6A098A5A26549B4C006EA440 /* link.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = link.c; sourceTree = "<group>"; };
 		6A1A5643264BB5BF0071DAC9 /* day08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = day08; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1A5645264BB5BF0071DAC9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		6A1A564A264BB5D60071DAC9 /* StructClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StructClass.h; sourceTree = "<group>"; };
@@ -326,6 +329,8 @@
 				6AD196FA26538D6E004E0DD7 /* main.c */,
 				6AD196FF2653B7BE004E0DD7 /* NodeClass.h */,
 				6AD197002653B7BE004E0DD7 /* NodeClass.c */,
+				6A098A5926549B4C006EA440 /* link.h */,
+				6A098A5A26549B4C006EA440 /* link.c */,
 			);
 			path = day10;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD197012653B7BE004E0DD7 /* NodeClass.c in Sources */,
+				6A098A5B26549B4C006EA440 /* link.c in Sources */,
 				6AD196FB26538D6E004E0DD7 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
