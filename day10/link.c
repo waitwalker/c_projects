@@ -49,14 +49,15 @@ STU *insertLinkEnd(STU *head, STU tmp) {
     if (head == NULL) {
         head = pi;
     } else {
+        /// 不要随意操作head节点
         STU *pd = head;
-        ///2.1 先找到尾部
+        ///2.1 先找到尾部节点
         while (pd->next != NULL) {
             pd = pd->next;
-            ///2.2 找到尾部的next 为 NULL
-            if (pd->next == NULL) {
-                pd->next = pi;
-            }
+        }
+        ///2.2 找到尾部的next 为 NULL时将插入节点赋值给尾节点的next
+        if (pd->next == NULL) {
+            pd->next = pi;
         }
     }
     return head;

@@ -40,7 +40,11 @@ int main(int argc, const char * argv[]) {
             printf("请输入节点信息\n");
             STU tmp;
             scanf("%d %s %f",&tmp.num, tmp.name, &tmp.score);
-            head = insertLink(head, tmp);
+            /// 在链表head之前插入节点
+            //head = insertLink(head, tmp);
+            
+            /// 在链表尾部插入节点
+            head = insertLinkEnd(head, tmp);
         } else if (strcmp(cmd, "print") == 0) {
             printf("----- print 遍历 -----\n");
             printLink(head);
