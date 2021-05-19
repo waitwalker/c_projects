@@ -43,6 +43,7 @@ int main(int argc, const char * argv[]) {
             head = insertLink(head, tmp);
         } else if (strcmp(cmd, "print") == 0) {
             printf("----- print 遍历 -----\n");
+            printLink(head);
         } else if (strcmp(cmd, "search") == 0) {
             printf("----- search 查询 -----\n");
         } else if (strcmp(cmd, "delete") == 0) {

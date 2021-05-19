@@ -25,4 +25,6 @@ typedef struct stu {
 /// 插入链表
 STU *insertLink(STU *head, STU tmp);
 
+/// 链表的遍历
+void printLink(STU *head);
 #endif /* link_h */

@@ -35,3 +35,16 @@ STU *insertLink(STU *head, STU tmp) {
     }
     return head;
 }
+
+void printLink(STU *head) {
+    if (head == NULL) {
+        printf("链表不存在\n");
+        return;
+    }
+    STU *pb = head;/// 不要随意操作头节点
+    while (pb != NULL) {
+        printf("节点当前信息: %d %s %.1f\n",pb->num, pb->name, pb->score);
+        pb = pb->next;
+    }
+    return;
+}
