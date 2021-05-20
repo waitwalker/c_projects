@@ -214,7 +214,9 @@ void choiceSort(void) {
     for (i = 0; i < n;i++ ) {
         scanf("%d",&arr[i]);
     }
-    
+    for (i = 0; i < n; i++) {
+        printf("输入的数据:%d\n",arr[i]);
+    }
     for (i = 0; i < n-1; i++) {
         for (min = i,j=min+1; j < n;j ++) {
             /// 记录一下j的位置
