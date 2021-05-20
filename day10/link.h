@@ -37,6 +37,9 @@ STU *searchLink(STU *head, char *name);
 /// 删除链表中某个节点
 STU *deleteLink(STU *head, char *name);
 
+/// 释放链表
+STU *freeLink(STU *head);
+
 /// 链表的遍历
 void printLink(STU *head);
 #endif /* link_h */

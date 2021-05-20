@@ -71,6 +71,7 @@ int main(int argc, const char * argv[]) {
             head = deleteLink(head, name);
         } else if (strcmp(cmd, "free") == 0) {
             printf("----- free 释放 -----\n");
+            head = freeLink(head);
         } else if (strcmp(cmd, "quit") == 0) {
             printf("----- quit 退出 -----\n");
             break;

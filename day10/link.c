@@ -176,6 +176,29 @@ STU *deleteLink(STU *head, char *name) {
     return head;
 }
 
+STU *freeLink(STU *head) {
+    /// 判断链表是否为空
+    if (head == NULL) {
+        perror("link is NULL");
+        return head;
+    } else {
+        /// 创建一个操作节点
+        STU *pd = head;
+        /// 逐个节点释放
+        while (pd != NULL) {
+            /// head 先保存下一个节点的位置
+            head = pd->next;
+            /// 释放pd指向的节点
+            free(pd);
+            /// pd指向head位置
+            pd = head;
+        }
+        printf("链表释放完成:\n");
+        return head;
+    }
+    return head;
+}
+
 void printLink(STU *head) {
     if (head == NULL) {
         printf("链表不存在\n");
