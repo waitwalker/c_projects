@@ -199,6 +199,35 @@ STU *freeLink(STU *head) {
     return head;
 }
 
+STU *reverseLink(STU *head) {
+    ///1. 判断链表是否存在
+    if (head == NULL) {
+        perror("link is NULL");
+        return head;
+    } else {
+        /// 声明两个中间变量
+        STU *pb, *pr;
+        /// 首先pb 保存head的下一个节点
+        pb = head->next;
+        /// 将head的next指针置为NULL
+        head->next = NULL;
+        while (pb != NULL) {
+            /// pr保存pb的next,因为pb的next即将指向head,逆转方向
+            pr = pb->next;
+            /// 将pd的next转向,指向head
+            pb->next = head;
+            
+            /// head 位置移动到pb位置
+            head = pb;
+            /// pb移动到pr位置
+            pb = pr;
+        }
+        printf("链表逆序成功\n");
+        return head;
+    }
+    return head;
+}
+
 void printLink(STU *head) {
     if (head == NULL) {
         printf("链表不存在\n");

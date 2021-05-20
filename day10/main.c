@@ -17,6 +17,8 @@ void stuHelp(void) {
     printf("# print: 遍历链表节点         #\n");
     printf("# search: 查询链表节点        #\n");
     printf("# delete: 删除链表节点        #\n");
+    printf("# reverse: 链表的逆序         #\n");
+    printf("# sort: 链表的排序            #\n");
     printf("# free: 释放链表             #\n");
     printf("# quit: 退出                #\n");
     printf("############################\n");
@@ -69,6 +71,11 @@ int main(int argc, const char * argv[]) {
             char name[64] = "";
             scanf("%s",name);
             head = deleteLink(head, name);
+        } else if (strcmp(cmd, "reverse") == 0) {
+            printf("----- reverse 逆序 -----\n");
+            head = reverseLink(head);
+        } else if (strcmp(cmd, "sort") == 0) {
+            printf("----- sort 排序 -----\n");
         } else if (strcmp(cmd, "free") == 0) {
             printf("----- free 释放 -----\n");
             head = freeLink(head);

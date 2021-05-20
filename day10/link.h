@@ -40,6 +40,9 @@ STU *deleteLink(STU *head, char *name);
 /// 释放链表
 STU *freeLink(STU *head);
 
+/// 链表逆序
+STU *reverseLink(STU *head);
+
 /// 链表的遍历
 void printLink(STU *head);
 #endif /* link_h */
