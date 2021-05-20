@@ -65,6 +65,10 @@ int main(int argc, const char * argv[]) {
             }
         } else if (strcmp(cmd, "delete") == 0) {
             printf("----- delete 删除 -----\n");
+            printf("请输入将要删除的姓名:\n");
+            char name[64] = "";
+            scanf("%s",name);
+            head = deleteLink(head, name);
         } else if (strcmp(cmd, "free") == 0) {
             printf("----- free 释放 -----\n");
         } else if (strcmp(cmd, "quit") == 0) {

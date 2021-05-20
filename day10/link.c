@@ -138,6 +138,44 @@ STU *searchLink(STU *head, char *name) {
     }
 }
 
+STU *deleteLink(STU *head, char *name) {
+    /// 判断链表是否存在
+    if (head == NULL) {
+        perror("link is NULL");
+        return head;
+    }
+    /// 实例化一个操作节点
+    STU *pb = head;
+    STU *pf = head;
+    ///1. 寻找删除点的位置
+    /// 不相等往下走 同时 不能越界
+    while (strcmp(pb->name, name) != 0 && pb->next != NULL) {
+        pf = pb;
+        pb = pb->next;
+    }
+    ///2. 找到删除点的位置
+    if (strcmp(pb->name, name) == 0) {
+        ///3.判断删除节点的位置
+        ///3.1 删除的节点是头节点
+        if (pb == head) {
+            head = pb->next;
+            free(pb);
+            printf("删除姓名:%s节点成功\n",name);
+            return head;
+        } else {
+            ///3.2 删除点节点是中部节点
+            pf->next = pb->next;
+            free(pb);
+            printf("删除姓名:%s节点成功\n",name);
+            return head;
+        }
+    } else {
+        printf("链表中没有查找到待删除数据节点:%s\n",name);
+        return head;
+    }
+    return head;
+}
+
 void printLink(STU *head) {
     if (head == NULL) {
         printf("链表不存在\n");
