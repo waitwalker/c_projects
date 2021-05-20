@@ -44,7 +44,10 @@ int main(int argc, const char * argv[]) {
             //head = insertLink(head, tmp);
             
             /// 在链表尾部插入节点
-            head = insertLinkEnd(head, tmp);
+            //head = insertLinkEnd(head, tmp);
+            
+            /// 有序插入
+            head = insertLinkOrder(head, tmp);
         } else if (strcmp(cmd, "print") == 0) {
             printf("----- print 遍历 -----\n");
             printLink(head);

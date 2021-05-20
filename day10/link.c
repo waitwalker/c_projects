@@ -63,6 +63,62 @@ STU *insertLinkEnd(STU *head, STU tmp) {
     return head;
 }
 
+STU *insertLinkOrder(STU *head, STU tmp) {
+    ///1. 给待插入的节点 申请堆区空间
+    STU *pi = (STU *)calloc(1, sizeof(STU));
+    if (pi == NULL) {
+        perror("error");
+        return head;
+    }
+    
+    ///2. 给申请的空间赋值 将tmp赋值给*pi
+    *pi = tmp;
+    pi->next = NULL;
+    
+    ///3. 将节点插入链表
+    ///3.1 链表不存在
+    if (head == NULL) {
+        head = pi;
+    } else {
+        ///3.2 链表存在
+        ///a 寻找插入点
+        STU *pb = head;
+        /// 借助一个变量 这个变量保存pb前一个变量
+        STU *pf = head;
+        /// 如果pb的num比插入的节点的num小同时还没有越界,也就是pb->next != NULL
+        /// 第一个判断语句不成立,说明pi >= Pb 插入要在中间或者前部
+        /// 第二个判断语句不成立,说明遍历到链表尾部还没有找到比pi大的,说明pi最大,插入在尾部
+        while (pb->num < pi->num && pb->next != NULL) {
+            /// 先保存pf的位置
+            pf = pb;
+            pb = pb->next;
+        }
+        
+        // 头部或中部插入
+        if (pb->num >= pi->num) {
+            /// 头部插入
+            if (pb == head) {
+                /// 指向旧的头
+                pi->next = head;
+                /// 更新新的头
+                head = pi;
+                return head;
+            } else {
+                /// 中部插入
+                pf->next = pi;
+                pi->next = pb;
+                return head;
+            }
+            
+        } else {
+            /// 找到末尾了
+            pb->next = pi;
+            return head;
+        }
+    }
+    return head;
+}
+
 void printLink(STU *head) {
     if (head == NULL) {
         printf("链表不存在\n");
@@ -75,3 +131,5 @@ void printLink(STU *head) {
     }
     return;
 }
+
+

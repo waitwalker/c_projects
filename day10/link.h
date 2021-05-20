@@ -28,6 +28,9 @@ STU *insertLink(STU *head, STU tmp);
 /// 插入链表 将节点插入在链表的尾部
 STU *insertLinkEnd(STU *head, STU tmp);
 
+/// 链表的有序插入
+STU *insertLinkOrder(STU *head, STU tmp);
+
 /// 链表的遍历
 void printLink(STU *head);
 #endif /* link_h */
