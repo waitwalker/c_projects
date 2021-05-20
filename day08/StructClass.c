@@ -206,6 +206,34 @@ void structScanf(void) {
     }
 }
 
+void choiceSort(void) {
+    int arr[10] = {0};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i = 0, j = 0, min = 0;
+    printf("请输入%d个int类型数据\n",n);
+    for (i = 0; i < n;i++ ) {
+        scanf("%d",&arr[i]);
+    }
+    
+    for (i = 0; i < n-1; i++) {
+        for (min = i,j=min+1; j < n;j ++) {
+            /// 记录一下j的位置
+            if (arr[min] > arr[j]) {
+                min = j;
+            }
+        }
+        if (min != i) {
+            int tmp = 0;
+            tmp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = tmp;
+        }
+    }
+    for (i = 0; i < n; i++) {
+        printf("排序后的数据:%d\n",arr[i]);
+    }
+}
+
 void typedefOperation(void) {
     StuStruct lucy = {
         100,

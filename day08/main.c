@@ -17,7 +17,8 @@ int main(int argc, const char * argv[]) {
     //structPointer();
     //structUse();
     //structStructOperation();
-    bitFieldOperation();
+    //bitFieldOperation();
+    choiceSort();
     printf("Hello, World!\n");
     return 0;
 }

@@ -37,4 +37,6 @@ void structStructOperation(void);
 /// 位段操作
 void bitFieldOperation(void);
 
+/// 选择排序
+void choiceSort(void);
 #endif /* StructClass_h */
