@@ -73,6 +73,8 @@ int main(int argc, const char * argv[]) {
             printf("----- free 释放 -----\n");
             head = freeLink(head);
         } else if (strcmp(cmd, "quit") == 0) {
+            /// 退出之前 先释放链表
+            head = freeLink(head);
             printf("----- quit 退出 -----\n");
             break;
         }
