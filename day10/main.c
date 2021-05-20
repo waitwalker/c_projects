@@ -60,6 +60,8 @@ int main(int argc, const char * argv[]) {
             ret = searchLink(head, name);
             if (ret != NULL) {
                 printf("num:%d name:%s score:%.1f",ret->num,ret->name,ret->score);
+            } else {
+                printf("没有查找到数据\n");
             }
         } else if (strcmp(cmd, "delete") == 0) {
             printf("----- delete 删除 -----\n");
