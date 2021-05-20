@@ -7,6 +7,7 @@
 
 #include "link.h"
 #include <stdlib.h>
+#include <string.h>
 
 /// 做的是头部之前插入 要把这个节点插在head之前
 STU *insertLink(STU *head, STU tmp) {
@@ -70,11 +71,9 @@ STU *insertLinkOrder(STU *head, STU tmp) {
         perror("error");
         return head;
     }
-    
     ///2. 给申请的空间赋值 将tmp赋值给*pi
     *pi = tmp;
     pi->next = NULL;
-    
     ///3. 将节点插入链表
     ///3.1 链表不存在
     if (head == NULL) {
@@ -117,6 +116,26 @@ STU *insertLinkOrder(STU *head, STU tmp) {
         }
     }
     return head;
+}
+
+STU *searchLink(STU *head, char *name) {
+    ///1. 先判断链表是否存在
+    if (head == NULL) {
+        perror("link is NULL");
+        return NULL;
+    }
+    
+    /// 查询链表
+    STU *pb = head;
+    /// 判断pb是否是末尾并且比较字符串
+    while (pb->next != NULL && strcmp(name, pb->name) != 0) {
+        pb = pb->next;
+    }
+    if (strcmp(name, pb->name) == 0) {
+        return pb;
+    } else {
+        return NULL;
+    }
 }
 
 void printLink(STU *head) {

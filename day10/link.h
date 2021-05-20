@@ -31,6 +31,9 @@ STU *insertLinkEnd(STU *head, STU tmp);
 /// 链表的有序插入
 STU *insertLinkOrder(STU *head, STU tmp);
 
+/// 查询链表
+STU *searchLink(STU *head, char *name);
+
 /// 链表的遍历
 void printLink(STU *head);
 #endif /* link_h */

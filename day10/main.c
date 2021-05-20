@@ -53,6 +53,14 @@ int main(int argc, const char * argv[]) {
             printLink(head);
         } else if (strcmp(cmd, "search") == 0) {
             printf("----- search 查询 -----\n");
+            printf("请输入要查找的用户名\n");
+            char name[64] = "";
+            scanf("%s",name);
+            STU *ret = NULL;
+            ret = searchLink(head, name);
+            if (ret != NULL) {
+                printf("num:%d name:%s score:%.1f",ret->num,ret->name,ret->score);
+            }
         } else if (strcmp(cmd, "delete") == 0) {
             printf("----- delete 删除 -----\n");
         } else if (strcmp(cmd, "free") == 0) {
