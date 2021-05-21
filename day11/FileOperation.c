@@ -16,6 +16,8 @@
 /// 3. stderr 标准出错 默认当前终端(屏幕)
 void fileOperation(void) {
     
+    char buffer[1024] = "";
+    int i = 0;
     //得到文件的绝对路径，path是相对路径，通过下面的操作就得到了绝对路径abspath
     char *filePath = "/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/a.txt";
     
@@ -28,7 +30,16 @@ void fileOperation(void) {
     }
     
     ///2. 对文件的操作
+    while (1) {
+        buffer[i] = fgetc(fp1);
+        /// 读到文件末尾
+        if (buffer[i] == EOF) {
+            break;
+        }
+        i++;
+    }
     
+    printf("读取的文件内容:%s\n",buffer);
     
     ///3. 关闭文件
     fclose(fp1);
