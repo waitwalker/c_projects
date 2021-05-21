@@ -10,6 +10,9 @@
 
 #include <stdio.h>
 
-void fileOperation(void);
+/// 文件读操作
+void fileReadOperation(void);
 
+/// 文件写操作
+void fileWriteOperation(void);
 #endif /* FileOperation_h */
