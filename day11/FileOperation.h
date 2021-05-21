@@ -30,4 +30,10 @@ void fileBlockReadOperation(void);
 
 /// 文件数据块写
 void fileBlockWriteOperation(void);
+
+/// 文件格式化读操作
+void fileFScanfOperation(void);
+
+/// 文件格式化写操作
+void fileFPrintfOperation(void);
 #endif /* FileOperation_h */

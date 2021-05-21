@@ -191,3 +191,29 @@ void fileBlockWriteOperation(void) {
     fwrite(hero, sizeof(Hero), n, fp);
     fclose(fp);
 }
+
+void fileFPrintfOperation(void) {
+    Hero hero[] = {
+        {"德玛西亚",80,60},
+        {"盲僧",90,80},
+        {"小法",40,85},
+        {"小炮",50,90}
+    };
+    
+    int n = sizeof(hero)/sizeof(hero[0]);
+    
+    FILE *fp = NULL;
+    
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/e.txt", "w");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        fprintf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,hero[i].def,hero[i].att);
+    }
+    
+    fclose(fp);
+}
+
