@@ -13,7 +13,8 @@ int main(int argc, const char * argv[]) {
     //fileReadOperation();
     //fileWriteOperation();
     //fileReadWriteOperation();
-    fileStringWriteOperation();
+    //fileStringWriteOperation();
+    fileStringReadOperation();
     printf("Hello, World!\n");
     return 0;
 }

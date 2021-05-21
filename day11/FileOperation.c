@@ -125,3 +125,23 @@ void fileStringWriteOperation(void) {
     
     fclose(fp);
 }
+
+void fileStringReadOperation(void) {
+    FILE *fp = NULL;
+    char buf[128] = "";
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/c.txt", "r");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    /// fgets从文件中获取字符串 读到\0符时 自动结束
+    while (1) {
+        char *ret = NULL;
+        ret = fgets(buf, sizeof(buf), fp);
+        if (ret == NULL) {
+            break;
+        }
+        printf("读取到的字符串:%s\n",buf);
+    }
+    fclose(fp);
+}
