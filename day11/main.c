@@ -11,7 +11,8 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     //fileReadOperation();
-    fileWriteOperation();
+    //fileWriteOperation();
+    fileReadWriteOperation();
     printf("Hello, World!\n");
     return 0;
 }

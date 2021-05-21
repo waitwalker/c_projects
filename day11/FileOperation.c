@@ -72,3 +72,39 @@ void fileWriteOperation(void) {
     /// 文件关闭
     fclose(fp);
 }
+
+void fileReadWriteOperation(void) {
+    FILE *fp1 = NULL;
+    FILE *fp2 = NULL;
+    
+    /// 以只读的方式打开a.txt
+    fp1 = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/a.txt", "r");
+    if (fp1 == NULL) {
+        perror("fp1 open ");
+        return;
+    }
+    
+    /// 以写的形式打开b.txt,如果没有创建,有清空内容
+    fp2 = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/b.txt", "w");
+    if (fp2 == NULL) {
+        perror("fp2 error");
+        return;
+    }
+    
+    /// 从fp1 中 每读取一个字节 写入到fp2中
+    while (1) {
+        char ch;
+        /// 读
+        ch = fgetc(fp1);
+        /// 已经读到文件末尾
+        if (ch == EOF) {
+            break;
+        }
+        
+        /// 写
+        fputc(ch, fp2);
+    }
+    
+    fclose(fp1);
+    fclose(fp2);
+}

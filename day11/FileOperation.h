@@ -15,4 +15,7 @@ void fileReadOperation(void);
 
 /// 文件写操作
 void fileWriteOperation(void);
+
+/// 文件的读写操作
+void fileReadWriteOperation(void);
 #endif /* FileOperation_h */
