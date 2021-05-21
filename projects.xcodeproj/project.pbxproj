@@ -147,6 +147,7 @@
 		6A10059C265659460021540F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		6A1005A12656595B0021540F /* FileOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileOperation.h; sourceTree = "<group>"; };
 		6A1005A22656595B0021540F /* FileOperation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileOperation.c; sourceTree = "<group>"; };
+		6A1005A4265753540021540F /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
 		6A1A5643264BB5BF0071DAC9 /* day08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = day08; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1A5645264BB5BF0071DAC9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		6A1A564A264BB5D60071DAC9 /* StructClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StructClass.h; sourceTree = "<group>"; };
@@ -276,6 +277,7 @@
 		6A10059B265659460021540F /* day11 */ = {
 			isa = PBXGroup;
 			children = (
+				6A1005A4265753540021540F /* a.txt */,
 				6A10059C265659460021540F /* main.c */,
 				6A1005A12656595B0021540F /* FileOperation.h */,
 				6A1005A22656595B0021540F /* FileOperation.c */,
