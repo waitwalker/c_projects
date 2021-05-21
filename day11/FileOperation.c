@@ -108,3 +108,20 @@ void fileReadWriteOperation(void) {
     fclose(fp1);
     fclose(fp2);
 }
+
+void fileStringWriteOperation(void) {
+    
+    char *buf[] = {"北京\n","上海\n","天津\n","重庆"};
+    int n = sizeof(buf)/sizeof(buf[0]);
+    FILE *fp = NULL;
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/c.txt", "w");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    for (int i = 0; i < n; i++) {
+        fputs(buf[i], fp);
+    }
+    
+    fclose(fp);
+}

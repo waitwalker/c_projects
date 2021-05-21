@@ -18,4 +18,10 @@ void fileWriteOperation(void);
 
 /// 文件的读写操作
 void fileReadWriteOperation(void);
+
+/// 文件的字符串读
+void fileStringReadOperation(void);
+
+/// 文件的字符串写
+void fileStringWriteOperation(void);
 #endif /* FileOperation_h */
