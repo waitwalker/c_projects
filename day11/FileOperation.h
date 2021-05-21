@@ -39,4 +39,8 @@ void fileFPrintfOperation(void);
 
 /// 文件的随机读写操作
 void fileRandomOperation(void);
+
+/// 文件结束检测操作
+void fileFeofOperation(void);
+
 #endif /* FileOperation_h */

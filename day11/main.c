@@ -19,7 +19,8 @@ int main(int argc, const char * argv[]) {
     //fileBlockReadOperation();
     //fileFPrintfOperation();
     //fileFScanfOperation();
-    fileRandomOperation();
+    //fileRandomOperation();
+    fileFeofOperation();
     printf("Hello, World!\n");
     return 0;
 }

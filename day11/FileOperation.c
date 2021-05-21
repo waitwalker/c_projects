@@ -238,13 +238,6 @@ void fileFScanfOperation(void) {
 }
 
 void fileRandomOperation(void) {
-    Hero hero[] = {
-        {"德玛西亚",80,60},
-        {"盲僧",90,80},
-        {"小法",40,85},
-        {"小炮",50,90}
-    };
-    
     FILE *fp = NULL;
     
     fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/f.txt", "r");
@@ -252,10 +245,6 @@ void fileRandomOperation(void) {
         perror("fp open");
         return;
     }
-    
-//    for (int i = 0; i < n; i++) {
-//        fprintf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,hero[i].def,hero[i].att);
-//    }
     
     long currentPosition = ftell(fp);
     
@@ -286,16 +275,23 @@ void fileRandomOperation(void) {
     printf("读到的文件内容:%s\n",fileData);
     free(fileData);
     fclose(fp);
-    return;
+}
+
+void fileFeofOperation(void) {
+    /// 判断文件是否到达文件末尾
+    ///EOF 宏只能用于文本文件检测文件结束 feof既可以用于文本文件也可以用于二进制文件检测文件结束
+    FILE *fp = NULL;
     
-    
-    Hero heros[4];
-    
-    for (int i = 0; i < 4 ; i++) {
-        fscanf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",heros[i].name,&heros[i].def,&heros[i].att);
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/f.txt", "r");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
     }
-    for (int i = 0; i < 4 ; i++) {
-        printf("英雄名称:%s 防御:%d 攻击:%d\n",heros[i].name,heros[i].def,heros[i].att);
+    
+    /// feof == 0 表示未结束
+    while (!feof(fp)) {
+        char cha = getc(fp);
+        printf("%c\n",cha);
     }
     
     fclose(fp);
