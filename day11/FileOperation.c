@@ -245,25 +245,49 @@ void fileRandomOperation(void) {
         {"小炮",50,90}
     };
     
-    int n = sizeof(hero)/sizeof(hero[0]);
-    
     FILE *fp = NULL;
     
-    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/f.txt", "w");
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/f.txt", "r");
     if (fp == NULL) {
         perror("fp open");
         return;
     }
     
-    for (int i = 0; i < n; i++) {
-        fprintf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,hero[i].def,hero[i].att);
-    }
+//    for (int i = 0; i < n; i++) {
+//        fprintf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,hero[i].def,hero[i].att);
+//    }
     
     long currentPosition = ftell(fp);
     
     printf("当前流指针距离首位置的字节数:%ld\n",currentPosition);
     
+    /// 重置到首位置
     rewind(fp);
+    
+    /// 定位到文件尾部
+    fseek(fp, 0, SEEK_END);
+    
+    long totalFileLength = ftell(fp);
+    printf("文件的总长度:%ld\n",totalFileLength);
+    
+    /// 重置到首位置
+    rewind(fp);
+    
+    /// 根据文件的总大小 合理申请内存空间
+    char *fileData = (char *)calloc(1, totalFileLength + 1);/// +1 用于末尾存放\0
+    if (fileData == NULL) {
+        fclose(fp);
+        return;
+    }
+    
+    /// 一次性 将文件数据读到 内存空间
+    fread(fileData, totalFileLength, 1, fp);
+    
+    printf("读到的文件内容:%s\n",fileData);
+    free(fileData);
+    fclose(fp);
+    return;
+    
     
     Hero heros[4];
     
