@@ -154,7 +154,20 @@ typedef struct {
 
 
 void fileBlockReadOperation(void) {
+    Hero hero[4];
+    FILE *fp = NULL;
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/d.txt", "r");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    fread(hero, sizeof(Hero), 4, fp);
     
+    for (int i = 0; i < 4; i++) {
+        printf("姓名:%s %d %d\n",hero[i].name,hero[i].def, hero[i].att);
+    }
+    
+    fclose(fp);
 }
 
 
