@@ -217,3 +217,23 @@ void fileFPrintfOperation(void) {
     fclose(fp);
 }
 
+void fileFScanfOperation(void) {
+    Hero hero[4];
+    FILE *fp = NULL;
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/e.txt", "r");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    
+    for (int i = 0; i < 4 ; i++) {
+        fscanf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,&hero[i].def,&hero[i].att);
+    }
+    
+    for (int i = 0; i < 4 ; i++) {
+        printf("英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,hero[i].def,hero[i].att);
+    }
+    
+    fclose(fp);
+}
+
