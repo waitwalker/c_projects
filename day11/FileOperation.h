@@ -36,4 +36,7 @@ void fileFScanfOperation(void);
 
 /// 文件格式化写操作
 void fileFPrintfOperation(void);
+
+/// 文件的随机读写操作
+void fileRandomOperation(void);
 #endif /* FileOperation_h */

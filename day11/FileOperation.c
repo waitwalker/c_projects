@@ -237,3 +237,43 @@ void fileFScanfOperation(void) {
     fclose(fp);
 }
 
+void fileRandomOperation(void) {
+    Hero hero[] = {
+        {"德玛西亚",80,60},
+        {"盲僧",90,80},
+        {"小法",40,85},
+        {"小炮",50,90}
+    };
+    
+    int n = sizeof(hero)/sizeof(hero[0]);
+    
+    FILE *fp = NULL;
+    
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/f.txt", "w");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        fprintf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",hero[i].name,hero[i].def,hero[i].att);
+    }
+    
+    long currentPosition = ftell(fp);
+    
+    printf("当前流指针距离首位置的字节数:%ld\n",currentPosition);
+    
+    rewind(fp);
+    
+    Hero heros[4];
+    
+    for (int i = 0; i < 4 ; i++) {
+        fscanf(fp, "英雄名称:%s 防御:%d 攻击:%d\n",heros[i].name,&heros[i].def,&heros[i].att);
+    }
+    for (int i = 0; i < 4 ; i++) {
+        printf("英雄名称:%s 防御:%d 攻击:%d\n",heros[i].name,heros[i].def,heros[i].att);
+    }
+    
+    fclose(fp);
+}
+
