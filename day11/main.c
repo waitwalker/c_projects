@@ -14,7 +14,8 @@ int main(int argc, const char * argv[]) {
     //fileWriteOperation();
     //fileReadWriteOperation();
     //fileStringWriteOperation();
-    fileStringReadOperation();
+    //fileStringReadOperation();
+    fileBlockWriteOperation();
     printf("Hello, World!\n");
     return 0;
 }

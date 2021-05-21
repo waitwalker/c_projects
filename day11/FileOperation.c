@@ -145,3 +145,36 @@ void fileStringReadOperation(void) {
     }
     fclose(fp);
 }
+
+typedef struct {
+    char name[16];
+    int def;
+    int att;
+} Hero;
+
+
+void fileBlockReadOperation(void) {
+    
+}
+
+
+void fileBlockWriteOperation(void) {
+    Hero hero[] = {
+        {"德玛西亚",80,60},
+        {"盲僧",90,80},
+        {"小法",40,85},
+        {"小炮",50,90}
+    };
+    
+    int n = sizeof(hero)/sizeof(hero[0]);
+    
+    FILE *fp = NULL;
+    
+    fp = fopen("/Users/waitwalker/Desktop/工作/github_projects/c_projects/day11/d.txt", "w");
+    if (fp == NULL) {
+        perror("fp open");
+        return;
+    }
+    fwrite(hero, sizeof(Hero), n, fp);
+    fclose(fp);
+}

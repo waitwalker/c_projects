@@ -24,4 +24,10 @@ void fileStringReadOperation(void);
 
 /// 文件的字符串写
 void fileStringWriteOperation(void);
+
+/// 文件数据块读
+void fileBlockReadOperation(void);
+
+/// 文件数据块写
+void fileBlockWriteOperation(void);
 #endif /* FileOperation_h */
