@@ -309,3 +309,46 @@ void getFileName(char *desFileName, char *srcFileName) {
     printf("请输入你的目标文件名称:");
     scanf("%s",desFileName);
 }
+
+char *readSrcFile(unsigned long *fileLength, char *srcFileName) {
+    FILE *fp = NULL;
+    char *data = NULL;
+    fp = fopen(srcFileName, "r");
+    if (fp == NULL) {
+        perror("fopen");
+        return NULL;
+    }
+    
+    /// 获取文件总长度
+    /// 将文件流指针 定位到文件尾部
+    fseek(fp, 0, 2);
+    *fileLength = ftell(fp);
+    
+    /// 复位文件流指针
+    rewind(fp);
+    
+    /// 根据文件的长度申请堆区空间
+    data = (char *)calloc(1, *fileLength);
+    if (data == NULL) {
+        perror("calloc error");
+        return NULL;
+    }
+    
+    /// 一次性读物文件内容
+    fread(data, *fileLength, 1, fp);
+    
+    /// 关闭文件
+    fclose(fp);
+    
+    /// 将读物的文件内容首地址 返回
+    return data;
+}
+
+char *fileTextEncrypt(char *fileText, unsigned long fileLength, unsigned int password) {
+    
+    int i = 0;
+    for (i = 0; i < fileLength; i++) {
+        fileText[i] += password;/// 加密过程
+    }
+    return fileText;
+}

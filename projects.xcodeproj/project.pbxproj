@@ -161,6 +161,8 @@
 		6A607EC62612B35100993DC4 /* Tools.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Tools.c; sourceTree = "<group>"; };
 		6A678C34260D711B0047A95E /* day04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = day04; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A678C36260D711B0047A95E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6A704B26265B44A100C13E19 /* dst.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dst.txt; sourceTree = "<group>"; };
+		6A704B27265B44A100C13E19 /* source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source.txt; sourceTree = "<group>"; };
 		6A883DF4263A4E970060A3CA /* day06 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = day06; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A883DF6263A4E970060A3CA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		6A8CD8EF2602DAA100CA1078 /* day03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = day03; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,8 @@
 		6A10059B265659460021540F /* day11 */ = {
 			isa = PBXGroup;
 			children = (
+				6A704B26265B44A100C13E19 /* dst.txt */,
+				6A704B27265B44A100C13E19 /* source.txt */,
 				6A1005A9265799C20021540F /* f.txt */,
 				6A1005A826578DBD0021540F /* e.txt */,
 				6A1005A72657825F0021540F /* d.txt */,

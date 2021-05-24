@@ -49,4 +49,10 @@ void printHelp(void);
 /// 获取文件名
 void getFileName(char *desFileName, char *srcFileName);
 
+/// 读取文件内容
+char *readSrcFile(unsigned long *fileLength, char *srcFileName);
+
+/// 加密
+char *fileTextEncrypt(char *fileText, unsigned long fileLength, unsigned int password);
+
 #endif /* FileOperation_h */
