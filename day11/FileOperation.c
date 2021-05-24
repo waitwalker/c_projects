@@ -294,6 +294,18 @@ void fileFeofOperation(void) {
         printf("%c\n",cha);
     }
     
-    fclose(fp);
+    fclose(fp); 
 }
 
+void printHelp(void) {
+    printf("********** 1:加密文件 *********\n");
+    printf("********** 2:解密文件 *********\n");
+    printf("********** 3:退出程序 *********\n");
+}
+
+void getFileName(char *desFileName, char *srcFileName) {
+    printf("请输入你的源文件名称:");
+    scanf("%s",srcFileName);
+    printf("请输入你的目标文件名称:");
+    scanf("%s",desFileName);
+}

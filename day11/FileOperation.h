@@ -43,4 +43,10 @@ void fileRandomOperation(void);
 /// 文件结束检测操作
 void fileFeofOperation(void);
 
+/// 打印帮助信息
+void printHelp(void);
+
+/// 获取文件名
+void getFileName(char *desFileName, char *srcFileName);
+
 #endif /* FileOperation_h */
