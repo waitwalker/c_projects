@@ -352,3 +352,33 @@ char *fileTextEncrypt(char *fileText, unsigned long fileLength, unsigned int pas
     }
     return fileText;
 }
+
+char *fileTextDecrypt(char *fileText, unsigned long fileLength, unsigned int password) {
+    int i = 0;
+    for (i = 0; i < fileLength; i++) {
+        fileText[i] -= password;/// 解密过程
+    }
+    return fileText;
+}
+
+void saveFile(char *fileText, unsigned long fileLength, char *dstFileName) {
+    FILE *fp = NULL;
+    fp = fopen(dstFileName, "w");
+    if (fp == NULL) {
+        perror("fopen");
+        return;
+    }
+    
+    /// 将数据写入到文件中
+    fwrite(fileText, fileLength, 1, fp);
+    
+    fclose(fp);
+    
+    /// 释放text指向的堆区空间
+    if (fileText != NULL) {
+        free(fileText);
+        fileText = NULL;
+        printf("保存成功\n");
+    }
+    
+}

@@ -55,4 +55,10 @@ char *readSrcFile(unsigned long *fileLength, char *srcFileName);
 /// 加密
 char *fileTextEncrypt(char *fileText, unsigned long fileLength, unsigned int password);
 
+/// 解密
+char *fileTextDecrypt(char *fileText, unsigned long fileLength, unsigned int password);
+
+/// 保存文件
+void saveFile(char *fileText, unsigned long fileLength, char *dstFileName);
+
 #endif /* FileOperation_h */
